@@ -105,7 +105,7 @@ export default function Home() {
       </main>
 
       <footer className='max-w-6xl mx-auto flex mt-24 justify-center items-center'>
-        Made with love by victorvzn at 2022 - Victor Villazón
+        Made with love by victorvzn - 2022
       </footer>
     </div>
   )
