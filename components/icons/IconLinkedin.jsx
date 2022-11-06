@@ -1,0 +1,5 @@
+import React from 'react'
+
+const IconLinkeding = () => (<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="256" height="256"><g style="stroke:none;stroke-width:0;stroke-dasharray:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;fill:none;fill-rule:nonzero;opacity:1"><path d="M83.349 0H6.651C2.978 0 0 2.887 0 6.447v77.106C0 87.114 2.978 90 6.651 90h76.698C87.022 90 90 87.114 90 83.553V6.447C90 2.887 87.022 0 83.349 0zM27.282 75.339H13.688v-40.64h13.594v40.64zm-6.797-46.188h-.088c-4.562 0-7.512-3.121-7.512-7.021 0-3.988 3.04-7.022 7.69-7.022 4.651 0 7.513 3.034 7.601 7.022 0 3.9-2.951 7.021-7.691 7.021zm55.814 46.188H62.707V53.598c0-5.463-1.968-9.19-6.887-9.19-3.756 0-5.992 2.513-6.975 4.94-.359.868-.447 2.081-.447 3.296v22.695H34.804s.178-36.826 0-40.64h13.594v5.756c1.806-2.769 5.036-6.709 12.251-6.709 8.944 0 15.65 5.808 15.65 18.291v23.302z" style="stroke:none;stroke-width:1;stroke-dasharray:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;fill:#000;fill-rule:nonzero;opacity:1" transform="matrix(2.81 0 0 2.81 1.407 1.407)"/></g></svg>)
+
+export default IconLinkeding
