@@ -31,6 +31,7 @@ export default function Home() {
       tags: [ 'React', 'Firebase', 'Vercel'],
       links: {
         live: 'https://memkards.vercel.app',
+        repository: 'https://gitlab.com/victorvzn/memkards-web'
       },
     },
     {
