@@ -18,12 +18,14 @@ const Card = ({
   return (
     <article className={`flex flex-col border-8 rounded-lg ${borderClass} hover:duration-300 hover:shadow-md hover:scale-110-off duration-300 transition-all`}>
       <div className='flex-none w-auto h-60 relative'>
-        <Image
-          className='inset-0 w-full h-full object-cover'
-          src={image}
-          alt="Proyecto foto"
-          width={320}
-          height={240} />
+        <Link href={links.live} target='_blank' className='text-white'>
+          <Image
+            className='inset-0 w-full h-full object-cover'
+            src={image}
+            alt="Proyecto foto"
+            width={320}
+            height={240} />
+        </Link>
       </div>
       <div className={`flex-auto p-4 ${bgClass}`}>
         <div className="flex flex-col">

@@ -16,10 +16,21 @@ export default function Home() {
       image: '/images/personal1.png',
       title: 'victorvillazon.com',
       content: 'Página personal con mi portafolio y proyectos',
-      tags: ['React', 'Vite', 'Next.js'],
+      tags: ['React', 'Tai,lwind CSS', 'Vite', 'Next.js'],
       links: {
         live: 'https://victorvillazon.com',
         repository: 'https://github.com/victorvzn/victorvillazon-portfolio',
+      },
+    },
+    {
+      id: 2,
+      type: 'react',
+      image: '/images/memkards1.png',
+      title: 'Memkards',
+      content: 'Aplicación para gestionar flashcards con autorización por Github',
+      tags: [ 'React', 'Firebase', 'Vercel'],
+      links: {
+        live: 'https://memkards.vercel.app',
       },
     },
     {
@@ -44,18 +55,6 @@ export default function Home() {
       links: {
         live: 'https://invoices-app-vue3.vercel.app',
         repository: 'https://github.com/victorvzn/invoices-app-vue3'
-      },
-    },
-    {
-      id: 2,
-      type: 'vue',
-      image: '/images/memkards1.png',
-      title: 'Memkards',
-      content: 'Aplicación para gestionar flashcards con autorización por Github',
-      tags: [ 'Vue2', 'Firebase', 'Vercel'],
-      links: {
-        live: 'https://memkards.vercel.app',
-        repository: 'https://github.com/victorvzn/victorvillazon-portfolio',
       },
     },
     {
@@ -113,7 +112,7 @@ export default function Home() {
                 <ul className='list-disc ml-7'>
                   <li className='mb-4'>
                     <strong>Competente:</strong><br />
-                    GNU/Linux, HTML, CSS, Sass, Javascript, ESNext, JWT, RWD, Jest, Cypress, Vue.js, Vuex, Pinia, React.js, Git.
+                    GNU/Linux, HTML, CSS, Sass, Tailwind CSS, Javascript, ESNext, JWT, RWD, Jest, Cypress, Vue.js, Vuex, Pinia, React.js, Git.
                   </li>
                   <li>
                     <strong>Familiar:</strong><br />
