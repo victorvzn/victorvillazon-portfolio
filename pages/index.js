@@ -16,7 +16,7 @@ export default function Home() {
       image: '/images/personal1.png',
       title: 'victorvillazon.com',
       content: 'Página personal con mi portafolio y proyectos',
-      tags: ['React', 'Tai,lwind CSS', 'Vite', 'Next.js'],
+      tags: ['React', 'Tailwind CSS', 'Vite', 'Next.js'],
       links: {
         live: 'https://victorvillazon.com',
         repository: 'https://github.com/victorvzn/victorvillazon-portfolio',
