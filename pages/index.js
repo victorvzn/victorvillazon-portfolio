@@ -90,11 +90,24 @@ export default function Home() {
     <>
       <Head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home - Victor Villazón</title>
-        <meta name="description" content="Victor Villazón personal page" />
         <link rel="icon" href="/favicon.ico" />
-      </Head> 
+        
+        <title>Victor Villazón</title>
+        <meta name="title" content="Victor Villazón" />
+        <meta name="description" content="Desarrollador frontend especializado en Javascript, Vue.js y React.js" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.victorvillazon.com" />
+        <meta property="og:title" content="Victor Villazón" />
+        <meta property="og:description" content="Desarrollador frontend especializado en Javascript, Vue.js y React.js" />
+        <meta property="og:image" content="" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.victorvillazon.com" />
+        <meta property="twitter:title" content="Victor Villazón" />
+        <meta property="twitter:description" content="Desarrollador frontend especializado en Javascript, Vue.js y React.js" />
+        <meta property="twitter:image" content="" />
+      </Head>
 
       <main className='h-max max-w-6xl mx-auto flex flex-col mt-10 md:mt-24'>
         <div className='flex flex-col md:flex-row'>
