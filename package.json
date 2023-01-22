@@ -6,16 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm install --no-fund --no-audit --no-package-lock"
   },
   "dependencies": {
-    "next": "13.0.2",
+    "next": "13.1.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-scroll": "1.8.9"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.2"
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
   }
 }

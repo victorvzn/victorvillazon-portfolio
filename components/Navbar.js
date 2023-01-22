@@ -1,26 +1,30 @@
 import Logo from '../components/Logo'
-import Link from 'next/link'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
   return (
     <header className='sticky top-0 z-10 backdrop-blur-sm bg-slate/20'>
       <div  className='max-w-6xl mx-auto flex justify-between items-center py-4'>
-        <a href="#top"><Logo /></a>
+        <a href="/"><Logo /></a>
         <nav className=''>
           <ul className='flex justify-center gap-10'>
             <li>
               <Link
-                className="hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block"
-                href="/">Home</Link>
+                className="border-b-4 border-transparent hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block cursor-pointer"
+                to="top"
+                spy={true}
+                smooth={true}>Home</Link>
             </li>
             <li>
               <Link
-                className="hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block"
-                href="/#projects">Portafolio</Link>
+                className="border-b-4 border-transparent hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block cursor-pointer"
+                to="projects"
+                spy={true}
+                smooth={true}>Portafolio</Link>
             </li>
             <li className='hidden'>
               <Link
-                className="hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block"
+                className="border-b-4 border-transparent hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block"
                 href="/blog">Blog (soon)</Link>
             </li>
             <li>

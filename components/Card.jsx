@@ -8,6 +8,7 @@ const Card = ({
   links = { live: '', repository: '', figma: '' },
   tags = ['JS', 'Jest'],
   type = 'default',
+  isVip = false
 }) => {
   const types = {
     'default': ['border-amber-400', 'bg-amber-400'],
@@ -17,20 +18,25 @@ const Card = ({
   const [ borderClass, bgClass ] = types[type]
   return (
     <article className={`flex flex-col border-8 rounded-lg ${borderClass} hover:duration-300 hover:shadow-md hover:scale-110-off duration-300 transition-all`}>
-      <div className='flex-none w-auto h-60 relative'>
+    
+    <div className='flex-none w-auto h-60 relative'>
+        {isVip && 
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="feather feather-star  text-amber-400 fill-amber-400 absolute top-1 left-1" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        }
         <Link href={links.live} target='_blank' className='text-white'>
           <Image
             className='inset-0 w-full h-full object-cover'
             src={image}
             alt="Proyecto foto"
-            width={320}
-            height={240} />
+            fill />
         </Link>
       </div>
       <div className={`flex-auto p-4 ${bgClass}`}>
         <div className="flex flex-col">
-          <div className='flex justify-between items-center'>
-            <div className="flex-auto text-2xl font-semibold text-slate-900">{title}</div>
+          <div className='flex justify-between items-center gap-5'>
+            <div className="flex-auto text-2xl font-semibold text-slate-900">
+              <span>{title}</span>
+            </div>
             <div className='flex justify-between gap-3 text-lg font-semibold text-slate-600'>
             { links?.live &&
               <Link href={links.live} target='_blank' className='text-white'>
@@ -47,7 +53,7 @@ const Card = ({
               }
               { links?.figma && 
                 <Link href={links.figma} target='_blank' alt="Figma">
-                  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} style={{fill:'#fff'}} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" class="feather feather-figma"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5zM12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0zM5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0zM5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} style={{fill:'#fff'}} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="feather feather-figma"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5zM12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0zM5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0zM5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
                 </Link>
               }
             </div>
