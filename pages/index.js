@@ -192,6 +192,7 @@ export default function Home() {
         <div className='grid grid-cols-1 gap-8 my-24 md:grid-cols-3'>
           {cards && cards
             .filter(card => filter == 'all' || card.type === filter)
+            .filter(card => card.isHidden !== true)
             .map(card => {
               return (
                 <Card
