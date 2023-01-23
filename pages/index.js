@@ -22,7 +22,7 @@ export default function Home() {
         repository: 'https://github.com/victorvzn/tdd-score-board-react'
       },
       isVip: true,
-      isHidden: true
+      isHidden: false
     },
     {
       id: 1,
