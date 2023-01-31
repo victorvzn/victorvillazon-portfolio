@@ -25,6 +25,24 @@ export default function Home() {
       isHidden: false
     },
     {
+      id: 8,
+      type: 'react',
+      image: '/images/pokemon-list-react-router-redux.png',
+      title: 'PokemonList + React + Router + Redux',
+      content: 'Listado de pokemons usando Redux',
+      tags: ['React', 'Javascript', 'Vite', 'Redux Toolkit', 'React Router Dom v6'],
+      links: {
+        live: 'https://victorvzn.github.io/pokemonList-react/',
+        repository: 'https://github.com/victorvzn/pokemonList-react'
+      },
+      isVip: true,
+      isHidden: false,
+      collaborators: [{
+        name: 'Sofia Villazón',
+        link: 'https://www.linkedin.com/in/sofiavillazon/'
+      }]
+    },
+    {
       id: 1,
       type: 'react',
       image: '/images/personal1.png',
@@ -204,6 +222,7 @@ export default function Home() {
                   tags={card.tags}
                   links={card.links}
                   isVip={card.isVip}
+                  collaborators={card.collaborators}
                 />
               )
           })}

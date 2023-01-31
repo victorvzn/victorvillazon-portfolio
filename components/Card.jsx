@@ -8,7 +8,8 @@ const Card = ({
   links = { live: '', repository: '', figma: '' },
   tags = ['JS', 'Jest'],
   type = 'default',
-  isVip = false
+  isVip = false,
+  collaborators = []
 }) => {
   const types = {
     'default': ['border-amber-400', 'bg-amber-400'],
@@ -21,7 +22,7 @@ const Card = ({
     
     <div className='flex-none w-auto h-60 relative'>
         {isVip && 
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="feather feather-star  text-amber-400 fill-amber-400 absolute top-1 left-1" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="feather feather-star  text-amber-400 fill-amber-400 absolute top-1 left-1 z-10" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         }
         <Link href={links.live} target='_blank' className='text-white'>
           <Image
@@ -59,7 +60,16 @@ const Card = ({
             </div>
           </div>
           <div className="text-md font-semibold text-slate-600">{tags.join(', ')}</div>
-          <div className="w-full flex-none text-md font-medium text-slate-700 mt-2">{content}</div>
+          <div className="w-full flex flex-col text-md font-medium text-slate-700 mt-2">
+            {content}
+            {collaborators.length > 0 &&
+              <div className='mt-4'>
+                <strong className='font-semibold text-slate-900 mr-1'>Colaboradores:</strong>
+
+                {collaborators.map(collaborator => <a href={collaborator.link} target='_blank' className='underline underline-offset-2'>{collaborator.name}</a> )}
+              </div>
+            }
+          </div>
         </div>
       </div>
     </article>
