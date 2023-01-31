@@ -145,11 +145,11 @@ export default function Home() {
                 <ul className='list-disc ml-7'>
                   <li className='mb-4'>
                     <strong>Competente:</strong><br />
-                    GNU/Linux, HTML, CSS, Sass, Tailwind CSS, Javascript, ESNext, Typescript, JWT, RWD, Jest, Cypress, React.js, Vue.js , Git.
+                    GNU/Linux, HTML, CSS, Sass, Tailwind CSS, Javascript, ESNext, Typescript, JWT, RWD, Jest, Cypress, Next.js, React.js, Redux, Vue.js, Pinia, Git.
                   </li>
                   <li>
                     <strong>Familiar:</strong><br />
-                    Node.js, PHP, Laravel, Python, Django, Docker, AWS, DO, CI/CD, SQL, PostgreSQL, MySQL.
+                    Node.js, PHP, Laravel, Python, Django, Docker, AWS, DO, CI/CD, SQL, PostgreSQL, MySQL, Supabase.
                   </li>
                 </ul>
               </div>
