@@ -3,3 +3,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo-react {
+  filter: drop-shadow(0 0 .6em #61dafbaa);
+}
+
+.logo-vite {
+  filter: drop-shadow(0 0 .6em #41D1FF);
+}
+
+.logo-vue {
+  filter: drop-shadow(0 0 .6em #41B883);
+}
+
+.logo-ts {
+  filter: drop-shadow(0 0 .6em #3178c6);
+}

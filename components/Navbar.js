@@ -1,31 +1,32 @@
 import Logo from '../components/Logo'
-import { Link } from 'react-scroll'
+import { Link as LinkScroll } from 'react-scroll'
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
     <header className='sticky top-0 z-10 backdrop-blur-sm bg-slate/20'>
       <div  className='max-w-6xl mx-auto flex justify-between items-center py-4'>
-        <a href="/"><Logo /></a>
+        <LinkScroll className="cursor-pointer" to="top" spy={true} smooth={true}><Logo /></LinkScroll>
         <nav className=''>
           <ul className='flex justify-center gap-10'>
             <li>
-              <Link
+              <LinkScroll
                 className="border-b-4 border-transparent hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block cursor-pointer"
                 to="top"
                 spy={true}
-                smooth={true}>Home</Link>
+                smooth={true}>Home</LinkScroll>
             </li>
             <li>
-              <Link
+              <LinkScroll
                 className="border-b-4 border-transparent hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block cursor-pointer"
                 to="projects"
                 spy={true}
-                smooth={true}>Portafolio</Link>
+                smooth={true}>Portafolio</LinkScroll>
             </li>
-            <li className='hidden'>
+            <li className=''>
               <Link
-                className="border-b-4 border-transparent hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block"
-                href="/blog">Blog (soon)</Link>
+                className="border-b-4 border-transparent hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block cursor-pointer"
+                href="blog">Blog</Link>
             </li>
             <li>
               <Link href="https://github.com/victorvzn" target='_blank'>
