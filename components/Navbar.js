@@ -23,7 +23,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}>Portafolio</LinkScroll>
             </li>
-            <li className=''>
+            <li className='hidden'>
               <Link
                 className="border-b-4 border-transparent hover:duration-100 hover:ease-in-out hover:border-b-4 hover:border-amber-400 hidden md:block cursor-pointer"
                 href="blog">Blog</Link>
