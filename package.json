@@ -10,6 +10,7 @@
     "phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm install --no-fund --no-audit --no-package-lock"
   },
   "dependencies": {
+    "@vercel/analytics": "^0.1.8",
     "next": "13.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
