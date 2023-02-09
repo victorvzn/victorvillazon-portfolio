@@ -26,12 +26,11 @@ const Card = ({
         }
         <Link href={links.live} target='_blank' className='text-white'>
           <Image
-            className='inset-0 w-full h-full object-cover'
+            className='inset-0 w-auto h-auto object-cover'
             src={image}
             alt="Proyecto foto"
             width={700}
             height={240}
-            priority={true}
           />
         </Link>
       </div>
