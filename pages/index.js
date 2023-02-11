@@ -11,7 +11,21 @@ export default function Home() {
 
   const [cards, setCards] = useState([
     {
-      id: 7,
+      id: 1,
+      type: 'react',
+      image: '/images/coach-you-app.png',
+      title: 'CoachYou',
+      content: 'Proyecto para un MVP sobre Mentorías profesionales. Reserva tus sesiones de mentoría uno a uno con profesionales altamente calificados.',
+      tags: ['React', 'Vite', 'Vercel', 'Supabase'],
+      links: {
+        live: 'https://coach-you-react.vercel.app',
+        repository: 'https://github.com/victorvzn/coachYouReact'
+      },
+      isVip: false,
+      isHidden: false
+    },
+    {
+      id: 2,
       type: 'react',
       image: '/images/score-board-challenge-tdd.png',
       title: 'Challenge: Football World Cup Score Board',
@@ -25,7 +39,7 @@ export default function Home() {
       isHidden: false
     },
     {
-      id: 8,
+      id: 3,
       type: 'react',
       image: '/images/pokemon-list-react-router-redux.png',
       title: 'PokemonList + React + Router + Redux',
@@ -43,7 +57,7 @@ export default function Home() {
       }]
     },
     {
-      id: 1,
+      id: 4,
       type: 'react',
       image: '/images/personal1.png',
       title: 'victorvillazon.com',
@@ -55,7 +69,7 @@ export default function Home() {
       },
     },
     {
-      id: 2,
+      id: 5,
       type: 'react',
       image: '/images/memkards1.png',
       title: 'Memkards',
@@ -79,7 +93,7 @@ export default function Home() {
       }
     },
     {
-      id: 4,
+      id: 7,
       type: 'vue',
       image: '/images/invoice-app.png',
       title: 'Challenge: Invoice app',
@@ -91,7 +105,7 @@ export default function Home() {
       },
     },
     {
-      id: 3,
+      id: 8,
       type: 'vue',
       image: '/images/pokemon-challenge1.png',
       title: 'Challenge: Pokemon',
@@ -103,7 +117,7 @@ export default function Home() {
       },
     },
     {
-      id: 5,
+      id: 9,
       type: 'vue',
       image: '/images/vendedores-a-correr-1.png',
       title: 'Challenge: Vendedores',
