@@ -13,7 +13,7 @@ export default function Home() {
     {
       id: 1,
       type: 'react',
-      image: '/images/api-box-app.png',
+      image: '/images/api-box-app.webp',
       title: 'Api box',
       content: 'Crea APIs mock en segundos para aprender, probar y acelerar proyectos. Practica métodos HTTP sin configurar un backend, ideal para estudiantes y developers.',
       tags: ['React', 'Vite', 'Vercel', 'Turso'],
@@ -446,7 +446,7 @@ export default function Home() {
             <div className='relative'>
               <Image
                 className="rounded-full border-8 border-black border-opacity-10 hover:duration-300 hover:shadow-md"
-                src="/me.jpg"
+                src="/me.webp"
                 alt="Victor Villazón Photo"
                 width={380} height={380}
                 priority={true} />
