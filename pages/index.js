@@ -12,7 +12,7 @@ export default function Home() {
   const [cards, setCards] = useState([
     {
       id: 1,
-      type: 'next.js',
+      type: 'react',
       image: '/images/fullstack-academy-pro.webp',
       title: 'Fullstack Academy',
       content: 'Lecciones, retos con validación automática y seguimiento de progreso; usada por +300 alumnos. Auth con Github, roles y playground.',
