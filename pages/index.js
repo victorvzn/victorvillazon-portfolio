@@ -12,6 +12,20 @@ export default function Home() {
   const [cards, setCards] = useState([
     {
       id: 1,
+      type: 'next.js',
+      image: '/images/fullstack-academy-pro.webp',
+      title: 'Fullstack Academy',
+      content: 'Lecciones, retos con validación automática y seguimiento de progreso; usada por +300 alumnos. Auth con Github, roles y playground.',
+      tags: ['Next.js', 'React', 'Typescript', 'Zustand', 'Shadcn', 'Drizzle', 'Turso', 'Vercel'],
+      links: {
+        live: 'https://fullstack-academy-pro.vercel.app/c/g99',
+        repository: 'https://github.com/victorvzn/'
+      },
+      isVip: true,
+      isHidden: false
+    },
+    {
+      id: 2,
       type: 'react',
       image: '/images/api-box-app.webp',
       title: 'Api box',
@@ -25,7 +39,7 @@ export default function Home() {
       isHidden: false
     },
     {
-      id: 2,
+      id: 3,
       type: 'react',
       image: '/images/coach-you-app.png',
       title: 'CoachYou',
@@ -39,7 +53,7 @@ export default function Home() {
       isHidden: false
     },
     {
-      id: 3,
+      id: 4,
       type: 'react',
       image: '/images/score-board-challenge-tdd.png',
       title: 'Challenge: Football World Cup Score Board',
@@ -53,7 +67,7 @@ export default function Home() {
       isHidden: false
     },
     {
-      id: 4,
+      id: 5,
       type: 'react',
       image: '/images/pokemon-list-react-router-redux.png',
       title: 'PokemonList + React + Router + Redux',
@@ -71,7 +85,7 @@ export default function Home() {
       }]
     },
     {
-      id: 5,
+      id: 6,
       type: 'react',
       image: '/images/personal1.png',
       title: 'victorvillazon.com',
@@ -83,7 +97,7 @@ export default function Home() {
       },
     },
     {
-      id: 6,
+      id: 7,
       type: 'react',
       image: '/images/memkards1.png',
       title: 'Memkards',
@@ -95,7 +109,7 @@ export default function Home() {
       },
     },
     {
-      id: 7,
+      id: 8,
       type: 'react',
       image: '/images/phone-book1.png',
       title: 'Challenge: Phone Book',
@@ -107,7 +121,7 @@ export default function Home() {
       }
     },
     {
-      id: 8,
+      id: 9,
       type: 'vue',
       image: '/images/invoice-app.png',
       title: 'Challenge: Invoice app',
@@ -119,7 +133,7 @@ export default function Home() {
       },
     },
     {
-      id: 9,
+      id: 10,
       type: 'vue',
       image: '/images/pokemon-challenge1.png',
       title: 'Challenge: Pokemon',
@@ -131,7 +145,7 @@ export default function Home() {
       },
     },
     {
-      id: 10,
+      id: 11,
       type: 'vue',
       image: '/images/vendedores-a-correr-1.png',
       title: 'Challenge: Vendedores',
