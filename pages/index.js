@@ -41,7 +41,7 @@ export default function Home() {
     {
       id: 3,
       type: 'react',
-      image: '/images/coach-you-app.png',
+      image: '/images/coach-you-app.webp',
       title: 'CoachYou',
       content: 'Proyecto para un MVP sobre Mentorías profesionales. Reserva tus sesiones de mentoría uno a uno con profesionales altamente calificados.',
       tags: ['React', 'Vite', 'Vercel', 'Supabase'],
@@ -55,7 +55,7 @@ export default function Home() {
     {
       id: 4,
       type: 'react',
-      image: '/images/score-board-challenge-tdd.png',
+      image: '/images/score-board-challenge-tdd.webp',
       title: 'Challenge: Football World Cup Score Board',
       content: 'Reto de código en el que demostré mi habilidad usando TDD aplicando principios SOLID y Clean Code',
       tags: ['React', 'Typescript', 'Vite', 'Vitest', 'Jest', 'TDD', 'testing-library/react', 'Cypress', 'ESLint', 'SOLID Principles', 'Clean Code'],
@@ -69,7 +69,7 @@ export default function Home() {
     {
       id: 5,
       type: 'react',
-      image: '/images/pokemon-list-react-router-redux.png',
+      image: '/images/pokemon-list-react-router-redux.webp',
       title: 'PokemonList + React + Router + Redux',
       content: 'Listado de pokemons usando Redux',
       tags: ['React', 'Javascript', 'Vite', 'Redux Toolkit', 'React Router Dom v6'],
@@ -87,7 +87,7 @@ export default function Home() {
     {
       id: 6,
       type: 'react',
-      image: '/images/personal1.png',
+      image: '/images/personal1.webp',
       title: 'victorvillazon.com',
       content: 'Página personal con mi portafolio y proyectos',
       tags: ['React', 'Tailwind CSS', 'Vite', 'Next.js'],
@@ -99,7 +99,7 @@ export default function Home() {
     {
       id: 7,
       type: 'react',
-      image: '/images/memkards1.png',
+      image: '/images/memkards1.webp',
       title: 'Memkards',
       content: 'Aplicación para gestionar flashcards con autorización por Github',
       tags: [ 'React', 'Firebase', 'Vercel'],
@@ -111,7 +111,7 @@ export default function Home() {
     {
       id: 8,
       type: 'react',
-      image: '/images/phone-book1.png',
+      image: '/images/phone-book1.webp',
       title: 'Challenge: Phone Book',
       content: 'Reto técnico para demostrar conocimientos en react.js',
       tags: ['React', 'Vite', 'Vercel'],
@@ -123,7 +123,7 @@ export default function Home() {
     {
       id: 9,
       type: 'vue',
-      image: '/images/invoice-app.png',
+      image: '/images/invoice-app.webp',
       title: 'Challenge: Invoice app',
       content: 'Reto de maquetación desde frontendmentor hecho con Tailwind',
       tags: ['Vue3', 'Vite', 'Pinia', 'Tailwind'],
@@ -135,7 +135,7 @@ export default function Home() {
     {
       id: 10,
       type: 'vue',
-      image: '/images/pokemon-challenge1.png',
+      image: '/images/pokemon-challenge1.webp',
       title: 'Challenge: Pokemon',
       content: 'Reto técnico para administrar pokemons favoritos y uso de modales usando https://pokeapi.co',
       tags: ['Vue2', 'Vuex', 'Axios', 'Cypress', 'Vercel'],
@@ -147,7 +147,7 @@ export default function Home() {
     {
       id: 11,
       type: 'vue',
-      image: '/images/vendedores-a-correr-1.png',
+      image: '/images/vendedores-a-correr-1.webp',
       title: 'Challenge: Vendedores',
       content: 'Reto técnico sobre un concurso para los vendedores de una empresa de imágenes usando el api https://api.alegra.com',
       tags: ['Vue2', 'Vuex', 'Axios', 'i18n'],
