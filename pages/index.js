@@ -228,7 +228,7 @@ export default function Home() {
             </div>
             <p className='text-lg text-zinc-400'>Hola, soy Victor Villazón · Senior Frontend Developer</p>
             <h1 className='text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl'>
-              Construyo productos <span className='text-accent'>SaaS y fintech</span> con Vue.js, TypeScript y React.
+              Productos SaaS y fintech con interfaces claras y <span className='text-accent'>código que dura.</span>
             </h1>
             <p className='max-w-xl text-lg leading-relaxed text-zinc-400'>
               Llevo +10 años creando productos para equipos en EE. UU., Latinoamérica y Europa. He liderado arquitecturas frontend desde cero, migraciones a microfrontends y equipos de hasta 6 desarrolladores. También formo desarrolladores: +500 alumnos.
