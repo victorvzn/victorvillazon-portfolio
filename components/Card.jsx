@@ -1,7 +1,10 @@
 import Image from 'next/image'
 
+import { useT } from '../locales'
+
+// La etiqueta de 'default' sale del diccionario (t.card.project)
 const TYPES = {
-  default: { label: 'Proyecto', dot: 'bg-accent' },
+  default: { label: null, dot: 'bg-accent' },
   react: { label: 'React', dot: 'bg-react' },
   vue: { label: 'Vue', dot: 'bg-vue' },
   'next.js': { label: 'Next.js', dot: 'bg-next' },
@@ -21,7 +24,10 @@ const Card = ({
   collaborators = []
 }) => {
   // Un tipo desconocido cae en 'default' en lugar de romper el render
-  const { label, dot } = TYPES[type] ?? TYPES.default
+  const t = useT()
+  const typeInfo = TYPES[type] ?? TYPES.default
+  const label = typeInfo.label ?? t.card.project
+  const { dot } = typeInfo
   const mainHref = links.live || links.repository
 
   const preview = (
@@ -30,7 +36,7 @@ const Card = ({
         ? <Image
             className='h-full w-full object-cover'
             src={image}
-            alt={`Captura de ${title}`}
+            alt={`${t.card.screenshotOf} ${title}`}
             width={700}
             height={394}
           />
@@ -39,12 +45,12 @@ const Card = ({
       {(isVip || isLive) &&
         <div className='absolute left-3 top-3 flex flex-wrap gap-2'>
           {isVip &&
-            <span className='rounded-full border border-zinc-700 bg-ink px-2.5 py-1 text-xs font-medium text-accent'>Destacado</span>
+            <span className='rounded-full border border-zinc-700 bg-ink px-2.5 py-1 text-xs font-medium text-accent'>{t.card.featured}</span>
           }
           {isLive &&
             <span className='inline-flex items-center gap-1.5 rounded-full border border-zinc-700 bg-ink px-2.5 py-1 text-xs font-medium text-green-400'>
               <span className='h-1.5 w-1.5 rounded-full bg-green-400' aria-hidden="true"></span>
-              En producción
+              {t.card.live}
             </span>
           }
         </div>
@@ -71,7 +77,7 @@ const Card = ({
 
         {collaborators.length > 0 &&
           <p className='text-sm text-zinc-400'>
-            <span className='font-medium text-zinc-200'>Colaboradores: </span>
+            <span className='font-medium text-zinc-200'>{t.card.collaborators}</span>
             {collaborators.map((collaborator, index) => (
               <span key={collaborator.link}>
                 {index > 0 && ', '}
@@ -81,7 +87,7 @@ const Card = ({
           </p>
         }
 
-        <ul className='flex flex-wrap gap-1.5' aria-label="Tecnologías">
+        <ul className='flex flex-wrap gap-1.5' aria-label={t.card.technologies}>
           {tags.map(tag => (
             <li key={tag} className='rounded-md bg-[#1f1f23] px-2 py-0.5 text-xs text-zinc-300'>{tag}</li>
           ))}
@@ -92,13 +98,13 @@ const Card = ({
             {links.live &&
               <a href={links.live} target='_blank' rel='noreferrer' className={`${linkClass} text-zinc-50`}>
                 <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 3h7v7M10 14 21 3M21 14v7H3V3h7" /></svg>
-                Demo
+                {t.card.demo}
               </a>
             }
             {links.repository &&
               <a href={links.repository} target='_blank' rel='noreferrer' className={`${linkClass} text-zinc-400`}>
                 <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6" /></svg>
-                Código
+                {t.card.code}
               </a>
             }
             {links.figma &&
