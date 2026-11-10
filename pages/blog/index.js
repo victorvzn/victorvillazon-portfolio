@@ -4,7 +4,7 @@ export default function Blog() {
   return (
     <div>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Blog - Victor Villazón</title>
         <meta name="description" content="Blog - Victor Villazón personal page" />

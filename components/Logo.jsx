@@ -1,11 +1,8 @@
 const Logo = () => {
   return (
-    <>
-      <div className="leading-none text-amber-400 font-bold text-4xl">
-        <span className="">{'{vv}'}</span>
-        <span className="hover:duration-150 hidden">{'{••}'}</span>
-      </div>
-    </>
+    <span className="font-mono text-lg font-medium text-zinc-50">
+      {'{vv}'}<span className="text-accent">.</span>
+    </span>
   )
 }
 
