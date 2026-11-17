@@ -21,6 +21,8 @@ const Card = ({
   type = 'default',
   isVip = false,
   isLive = false,
+  isProfessional = false,
+  role,
   collaborators = []
 }) => {
   // Un tipo desconocido cae en 'default' en lugar de romper el render
@@ -42,21 +44,28 @@ const Card = ({
           />
         : <div className='flex h-full w-full items-center justify-center p-6 text-center font-mono text-sm text-zinc-400'>{title}</div>
       }
-      {(isVip || isLive) &&
-        <div className='absolute left-3 top-3 flex flex-wrap gap-2'>
-          {isVip &&
-            <span className='rounded-full border border-zinc-700 bg-ink px-2.5 py-1 text-xs font-medium text-accent'>{t.card.featured}</span>
-          }
-          {isLive &&
-            <span className='inline-flex items-center gap-1.5 rounded-full border border-zinc-700 bg-ink px-2.5 py-1 text-xs font-medium text-green-400'>
-              <span className='h-1.5 w-1.5 rounded-full bg-green-400' aria-hidden="true"></span>
-              {t.card.live}
-            </span>
-          }
-        </div>
-      }
     </>
   )
+
+  // Las insignias van debajo de la imagen para no tapar la captura
+  const badges = (isProfessional || isVip || isLive) &&
+    <div className='flex flex-wrap gap-2'>
+      {isProfessional &&
+        <span className='inline-flex items-center gap-1.5 rounded-full border border-zinc-700 bg-ink px-2.5 py-1 text-xs font-medium text-sky-400'>
+          <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /></svg>
+          {t.card.professional}
+        </span>
+      }
+      {isVip &&
+        <span className='rounded-full border border-zinc-700 bg-ink px-2.5 py-1 text-xs font-medium text-accent'>{t.card.featured}</span>
+      }
+      {isLive &&
+        <span className='inline-flex items-center gap-1.5 rounded-full border border-zinc-700 bg-ink px-2.5 py-1 text-xs font-medium text-green-400'>
+          <span className='h-1.5 w-1.5 rounded-full bg-green-400' aria-hidden="true"></span>
+          {t.card.live}
+        </span>
+      }
+    </div>
 
   const previewClass = 'relative block aspect-video border-b border-line bg-raised'
 
@@ -68,11 +77,17 @@ const Card = ({
       }
 
       <div className='flex flex-1 flex-col gap-3 p-5'>
+        {badges}
         <div className='flex items-center gap-2 font-mono text-xs text-zinc-400'>
           <span className={`h-2 w-2 rounded-full ${dot}`} aria-hidden="true"></span>
           {label}
         </div>
         <h3 className='text-lg font-semibold tracking-tight'>{title}</h3>
+        {role &&
+          <p className='text-sm text-zinc-300'>
+            <span className='font-medium text-accent'>{t.card.role}</span>{role}
+          </p>
+        }
         <p className='flex-1 text-sm leading-relaxed text-zinc-400'>{content}</p>
 
         {collaborators.length > 0 &&

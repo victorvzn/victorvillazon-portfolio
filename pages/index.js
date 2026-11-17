@@ -9,6 +9,11 @@ import { useLocale, useT } from '../locales'
 
 const SITE_URL = 'https://victorvillazon.com'
 const CULQI_DEMO_URL = 'https://afiliate.culqi.com/'
+// Proyectos propios hechos de punta a punta
+const FULL_PRODUCT_ROLE = {
+  es: 'Producto completo: planificación, UI, base de datos, API y deploy',
+  en: 'Full product: planning, UI, database, API and deployment'
+}
 
 // Los textos traducibles son { es, en }; los que no cambian entre idiomas quedan como string
 const tr = (value, locale) => (typeof value === 'object' ? value[locale] : value)
@@ -27,6 +32,27 @@ const cards = [
     links: {
       live: CULQI_DEMO_URL
     },
+    role: { es: 'Líder frontend', en: 'Frontend lead' },
+    isProfessional: true, // proyecto hecho para una empresa, no personal
+    isVip: true,
+    isLive: true,
+    isHidden: false
+  },
+  {
+    id: 13,
+    type: 'next.js',
+    image: '/images/microcommerce-pro.webp',
+    title: 'Microcommerce',
+    content: {
+      es: 'Tiendas online para pequeños negocios en Perú con pedidos por WhatsApp. Diseñé el modelo de datos, la autenticación de vendedores, la API de pedidos y la subida de imágenes: cada pedido se guarda en el panel antes de abrir WhatsApp, y el vendedor gestiona estados y pagos (Yape, Plin, transferencia o efectivo).',
+      en: 'Online stores for small businesses in Peru with WhatsApp ordering. I designed the data model, seller authentication, the orders API and image uploads: every order is saved to the dashboard before WhatsApp opens, and sellers manage order status and payments (Yape, Plin, bank transfer or cash).'
+    },
+    tags: ['Next.js', 'TypeScript', 'Drizzle', 'Turso', 'Zod', 'Tailwind CSS', 'Vercel'],
+    links: {
+      live: 'https://microcommerce-pro.vercel.app/'
+      // repository: pendiente hasta tener el repo público
+    },
+    role: FULL_PRODUCT_ROLE,
     isVip: true,
     isLive: true,
     isHidden: false
@@ -37,32 +63,36 @@ const cards = [
     image: '/images/fullstack-academy-pro.webp',
     title: 'Fullstack Academy',
     content: {
-      es: 'Plataforma educativa con lecciones, retos con validación automática y seguimiento del progreso. La usan más de 300 alumnos; incluye login con GitHub, roles y un playground de código.',
-      en: 'Learning platform with lessons, auto-graded challenges and progress tracking. Used by 300+ students; includes GitHub login, roles and a code playground.'
+      es: 'Plataforma educativa con lecciones, retos y seguimiento del progreso, usada por más de 300 alumnos. Construí el esquema de base de datos, el login con GitHub (OAuth), el control de acceso por roles, la validación automática de retos y un playground de código.',
+      en: 'Learning platform with lessons, challenges and progress tracking, used by 300+ students. I built the database schema, GitHub login (OAuth), role-based access control, auto-grading for challenges and a code playground.'
     },
-    tags: ['Next.js', 'React', 'Typescript', 'Zustand', 'Shadcn', 'Drizzle', 'Turso', 'Vercel'],
+    tags: ['Next.js', 'TypeScript', 'Drizzle', 'Turso', 'Zod', 'Zustand', 'shadcn/ui', 'Vercel'],
     links: {
-      live: 'https://fullstack-academy-pro.vercel.app/c/g99',
-      repository: 'https://github.com/victorvzn/'
+      live: 'https://fullstack-academy-pro.vercel.app/c/g99'
+      // repository: pendiente hasta tener el repo público
     },
+    role: FULL_PRODUCT_ROLE,
     isVip: true,
+    isLive: true,
     isHidden: false
   },
   {
     id: 2,
-    type: 'react',
+    type: 'next.js',
     image: '/images/api-box-app.webp',
     title: 'Api box',
     content: {
-      es: 'Crea APIs mock en segundos para practicar métodos HTTP sin montar un backend. La comunidad ya ha creado más de 1 200 APIs. Código abierto.',
-      en: 'Create mock APIs in seconds to practice HTTP methods without setting up a backend. The community has already created 1,200+ APIs. Open source.'
+      es: 'Crea APIs mock en segundos para practicar métodos HTTP sin montar un backend. Construí el backend que guarda y responde cada API, con validación de datos y persistencia en Turso. La comunidad ya ha creado más de 1 200 APIs.',
+      en: 'Create mock APIs in seconds to practice HTTP methods without setting up a backend. I built the backend that stores and serves every API, with data validation and persistence on Turso. The community has already created 1,200+ APIs.'
     },
-    tags: ['React', 'Vite', 'Vercel', 'Turso'],
+    tags: ['Next.js', 'TypeScript', 'Drizzle', 'Turso', 'Zod', 'Vercel'],
     links: {
-      live: 'https://apibox.vercel.app/',
-      repository: 'https://github.com/victorvzn/'
+      live: 'https://apibox.vercel.app/'
+      // repository: pendiente hasta tener el repo público
     },
+    role: FULL_PRODUCT_ROLE,
     isVip: true,
+    isLive: true,
     isHidden: false
   },
   {
@@ -214,11 +244,13 @@ const cards = [
 
 // `area` es una clave de t.skills.areas (locales/*.js)
 const skillGroups = [
-  { area: 'frontend', items: ['Vue.js 2/3', 'Pinia', 'React', 'Next.js', 'Zustand', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Sass', 'Tailwind CSS'] },
-  { area: 'architecture', items: ['Microfrontends', 'Design systems (Storybook)', { es: 'Migración de monolitos', en: 'Monolith migration' }, 'SOLID', 'APIs REST'] },
+  { area: 'frontend', items: ['Vue.js 2/3', 'Pinia', 'React', 'Next.js (App Router)', 'Zustand', 'Redux Toolkit', 'React Query', 'React Hook Form', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Sass', 'Tailwind CSS', 'shadcn/ui', 'Vite'] },
+  { area: 'backend', items: ['Node.js', 'Next.js (API routes, Server Actions)', { es: 'Modelado de datos', en: 'Data modeling' }, 'PostgreSQL', 'Drizzle ORM', 'Turso', 'Supabase', 'Zod', 'APIs REST', 'JWT / OAuth', { es: 'Control de acceso por roles', en: 'Role-based access' }, 'Laravel'] },
+  { area: 'architecture', items: ['Microfrontends', 'Design systems (Storybook)', { es: 'Migración de monolitos', en: 'Monolith migration' }, 'SOLID'] },
   { area: 'quality', items: ['Jest', 'Vitest', 'Testing Library', 'Cypress', 'TDD', 'ESLint', 'SonarQube'] },
-  { area: 'performance', items: ['Core Web Vitals', { es: 'Accesibilidad (WCAG)', en: 'Accessibility (WCAG)' }, 'Responsive design', 'Figma'] },
-  { area: 'devops', items: ['AWS', 'Vercel', 'Docker', 'CI/CD', 'Node.js', 'Laravel', 'PostgreSQL'] }
+  { area: 'performance', items: ['Core Web Vitals', 'Lighthouse', { es: 'Code splitting y lazy loading', en: 'Code splitting & lazy loading' }, { es: 'Accesibilidad (WCAG)', en: 'Accessibility (WCAG)' }, 'Responsive design', 'Figma'] },
+  { area: 'devops', items: ['AWS', 'Vercel', 'Docker', 'CI/CD (GitHub Actions)'] },
+  { area: 'ai', items: ['Claude', 'GitHub Copilot', 'ChatGPT', 'Supermaven'] }
 ]
 
 // `label` null = se usa t.projects.all
@@ -361,6 +393,8 @@ export default function Home() {
                 links={card.links}
                 isVip={card.isVip}
                 isLive={card.isLive}
+                isProfessional={card.isProfessional}
+                role={card.role && tr(card.role, locale)}
                 collaborators={card.collaborators}
               />
             ))}

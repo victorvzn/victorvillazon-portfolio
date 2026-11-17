@@ -1,7 +1,7 @@
 const en = {
   meta: {
-    title: 'Victor Villazón · Senior Frontend Developer',
-    description: 'Victor Villazón, Senior Frontend Developer. SaaS and fintech products with Vue.js, TypeScript and React.'
+    title: 'Victor Villazón · Senior Frontend Developer · Fullstack with Next.js',
+    description: 'Victor Villazón, Senior Frontend Developer who builds complete products with Next.js. SaaS and fintech with Vue.js, React, TypeScript, Node.js and SQL databases.'
   },
   nav: {
     home: 'Home - Victor Villazón',
@@ -13,10 +13,10 @@ const en = {
   },
   hero: {
     location: 'Remote · Chiclayo, Peru (UTC-5)',
-    greeting: "Hi, I'm Victor Villazón · Senior Frontend Developer",
-    titleStart: 'SaaS and fintech products with clear interfaces and ',
+    greeting: "Hi, I'm Victor Villazón · Senior Frontend Developer · Fullstack with Next.js",
+    titleStart: 'End-to-end SaaS and fintech products with clear interfaces and ',
     titleHighlight: 'code that lasts.',
-    intro: "I've spent 10+ years building products for teams in the US, Latin America and Europe. I've led frontend architectures from scratch, migrations to microfrontends and teams of up to 6 developers. I also mentor developers: 500+ students.",
+    intro: "I've spent 10+ years building products for teams in the US, Latin America and Europe. I've led frontend architectures from scratch, migrations to microfrontends and teams of up to 6 developers. On my own products I handle the whole cycle: planning, data modeling, APIs, authentication and deployment with Next.js, Drizzle and Turso. I also mentor developers: 500+ students.",
     cta: 'View projects',
     photoAlt: 'Photo of Victor Villazón'
   },
@@ -26,10 +26,12 @@ const en = {
     english: 'English B2 / professional.',
     areas: {
       frontend: 'Frontend',
+      backend: 'Backend & data',
       architecture: 'Architecture',
       quality: 'Quality & testing',
       performance: 'Performance & UX',
-      devops: 'DevOps & backend'
+      devops: 'Cloud & DevOps',
+      ai: 'AI-assisted development'
     }
   },
   projects: {
@@ -43,6 +45,8 @@ const en = {
     project: 'Project',
     featured: 'Featured',
     live: 'In production',
+    professional: 'Professional project',
+    role: 'My role: ',
     collaborators: 'Collaborators: ',
     screenshotOf: 'Screenshot of',
     technologies: 'Technologies',
