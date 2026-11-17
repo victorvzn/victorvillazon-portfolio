@@ -36,11 +36,11 @@ const Card = ({
     <>
       {image
         ? <Image
-            className='h-full w-full object-cover'
+            className='absolute inset-0 h-full w-full object-cover object-top'
             src={image}
             alt={`${t.card.screenshotOf} ${title}`}
             width={700}
-            height={394}
+            height={467}
           />
         : <div className='flex h-full w-full items-center justify-center p-6 text-center font-mono text-sm text-zinc-400'>{title}</div>
       }
@@ -67,7 +67,9 @@ const Card = ({
       }
     </div>
 
-  const previewClass = 'relative block aspect-video border-b border-line bg-raised'
+  // Caja 3:2 fija para todas las cards (las capturas van de 1.35 a 1.72); overflow-hidden evita
+  // que una imagen más alta estire la caja. object-top conserva la parte superior de la captura.
+  const previewClass = 'relative block aspect-[3/2] overflow-hidden border-b border-line bg-raised'
 
   return (
     <article className='flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition duration-300 hover:-translate-y-1 hover:border-zinc-600'>
