@@ -12,6 +12,72 @@ body {
   @apply bg-space text-zinc-50 font-sans antialiased;
 }
 
+/* ---------- Contenido de los posts (pages/blog/[slug].js) ---------- */
+
+.prose-post {
+  @apply text-[17px] leading-[1.75] text-zinc-300;
+}
+
+.prose-post > * + * { @apply mt-5; }
+
+.prose-post h2 { @apply mt-14 text-2xl font-semibold tracking-tight text-zinc-50 md:text-3xl; }
+.prose-post h3 { @apply mt-10 text-xl font-semibold text-zinc-50; }
+.prose-post h4 { @apply mt-8 font-semibold text-zinc-50; }
+
+.prose-post a { @apply text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent; }
+.prose-post strong { @apply font-semibold text-zinc-50; }
+
+.prose-post ul { @apply list-disc pl-6; }
+.prose-post ol { @apply list-decimal pl-6; }
+.prose-post li + li { @apply mt-2; }
+.prose-post li::marker { @apply text-zinc-500; }
+
+.prose-post blockquote { @apply border-l-2 border-accent pl-5 text-zinc-400; }
+.prose-post hr { @apply my-12 border-line; }
+.prose-post img { @apply rounded-xl border border-line; }
+
+.prose-post :not(pre) > code {
+  @apply rounded-md border border-line bg-raised px-1.5 py-0.5 font-mono text-[0.88em] text-zinc-100;
+}
+
+/* Los bloques de código hacen scroll dentro de su caja, nunca la página */
+.prose-post pre {
+  @apply overflow-x-auto rounded-xl border border-line bg-surface p-5 font-mono text-sm leading-relaxed;
+}
+
+.prose-post table { @apply block w-full overflow-x-auto border-collapse text-[15px]; }
+.prose-post th, .prose-post td { @apply border border-line px-3 py-2 text-left; }
+.prose-post th { @apply bg-raised font-semibold text-zinc-50; }
+
+/* Enlace "Probar en el playground" que lib/remarkPlayground.js pone bajo cada ejemplo */
+.prose-post p.playground { @apply mt-3; }
+
+.prose-post a.playground-link {
+  @apply inline-flex min-h-[44px] items-center gap-2 rounded-[10px] border border-zinc-700 bg-raised px-4 text-sm font-medium text-zinc-50 no-underline transition-colors hover:border-accent hover:text-accent;
+}
+
+.prose-post a.playground-link::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent currentColor;
+}
+
+/* Resaltado de código (clases de rehype-highlight / highlight.js) */
+.hljs { @apply text-zinc-200; }
+.hljs-comment, .hljs-quote { @apply italic text-zinc-500; }
+.hljs-keyword, .hljs-selector-tag, .hljs-built_in, .hljs-type { color: #c4b5fd; }
+.hljs-string, .hljs-attr-value, .hljs-template-tag, .hljs-regexp { color: #86efac; }
+.hljs-number, .hljs-literal, .hljs-symbol { color: #fbbf24; }
+.hljs-title, .hljs-title.function_, .hljs-section { color: #7dd3fc; }
+.hljs-attr, .hljs-attribute, .hljs-property, .hljs-variable, .hljs-params { color: #fcd34d; }
+.hljs-tag, .hljs-name, .hljs-selector-class, .hljs-selector-id { color: #f9a8d4; }
+.hljs-meta, .hljs-doctag { @apply text-zinc-400; }
+.hljs-deletion { color: #fca5a5; }
+.hljs-addition { color: #86efac; }
+
 /* ---------- Fondo animado (components/StarField.jsx) ---------- */
 
 .sky {

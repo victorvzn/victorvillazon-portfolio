@@ -9,6 +9,7 @@ const es = {
     skills: 'Habilidades',
     projects: 'Proyectos',
     contact: 'Contacto',
+    blog: 'Blog',
     language: 'Idioma'
   },
   hero: {
@@ -56,6 +57,33 @@ const es = {
   contact: {
     title: '¿Construimos algo juntos?',
     subtitle: 'Escríbeme por LinkedIn o revisa mi código en GitHub.'
+  },
+  blog: {
+    metaTitle: 'Blog · Victor Villazón',
+    metaDescription: 'Aprende HTML, CSS y JavaScript con ejemplos reales: artículos para programadores trainee y junior.',
+    label: 'BLOG',
+    title: 'Aprende desarrollo web con ejemplos reales',
+    subtitle: 'HTML, CSS y JavaScript explicados desde la base, para quienes están empezando a programar.',
+    filterLabel: 'Filtrar por serie',
+    all: 'Todos',
+    series: {
+      html: 'HTML',
+      css: 'CSS',
+      javascript: 'JavaScript',
+      frameworks: 'Frameworks',
+      backend: 'Backend',
+      carrera: 'Carrera'
+    },
+    empty: 'Todavía no hay artículos en esta serie.',
+    spanishOnly: null,
+    minRead: 'min de lectura',
+    draft: 'Borrador',
+    back: 'Volver al blog',
+    video: 'Mira la versión en video',
+    ctaTitle: '¿Te sirvió este artículo?',
+    ctaText: 'Cuéntame qué tema quieres que trate después o escríbeme si estás construyendo algo.',
+    ctaButton: 'Escríbeme por LinkedIn',
+    dateLocale: 'es-PE'
   }
 }
 

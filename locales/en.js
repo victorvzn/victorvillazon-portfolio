@@ -9,6 +9,7 @@ const en = {
     skills: 'Skills',
     projects: 'Projects',
     contact: 'Contact',
+    blog: 'Blog',
     language: 'Language'
   },
   hero: {
@@ -56,6 +57,33 @@ const en = {
   contact: {
     title: 'Shall we build something together?',
     subtitle: 'Message me on LinkedIn or check out my code on GitHub.'
+  },
+  blog: {
+    metaTitle: 'Blog · Victor Villazón',
+    metaDescription: 'Learn HTML, CSS and JavaScript with real examples: articles for trainee and junior developers.',
+    label: 'BLOG',
+    title: 'Learn web development with real examples',
+    subtitle: 'HTML, CSS and JavaScript explained from the ground up, for people starting to code.',
+    filterLabel: 'Filter by series',
+    all: 'All',
+    series: {
+      html: 'HTML',
+      css: 'CSS',
+      javascript: 'JavaScript',
+      frameworks: 'Frameworks',
+      backend: 'Backend',
+      carrera: 'Career'
+    },
+    empty: 'No articles in this series yet.',
+    spanishOnly: 'Articles are written in Spanish for now.',
+    minRead: 'min read',
+    draft: 'Draft',
+    back: 'Back to the blog',
+    video: 'Watch the video version',
+    ctaTitle: 'Did this article help?',
+    ctaText: "Tell me which topic you'd like next, or message me if you're building something.",
+    ctaButton: 'Message me on LinkedIn',
+    dateLocale: 'en-US'
   }
 }
 
