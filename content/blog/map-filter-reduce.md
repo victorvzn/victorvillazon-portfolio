@@ -4,7 +4,7 @@ description: 'Los tres métodos de arrays que más vas a usar en JavaScript, exp
 date: 2026-11-24
 series: javascript
 tags: [JavaScript, ES6, Arrays]
-draft: true
+draft: false
 # youtube: ID_DEL_VIDEO
 ---
 
