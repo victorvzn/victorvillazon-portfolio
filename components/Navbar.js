@@ -6,6 +6,18 @@ import { useRouter } from 'next/router'
 import { useLocale, useT } from '../locales'
 
 const navLinkClass = 'hidden md:block cursor-pointer text-zinc-400 transition-colors hover:text-accent'
+const contactClass = 'inline-flex items-center min-h-[36px] px-3.5 rounded-lg border border-zinc-700 text-zinc-50 cursor-pointer transition-colors hover:border-accent hover:text-accent'
+
+// En la home hace scroll suave a la sección; en otras páginas (blog) vuelve a la home en esa sección
+const SectionLink = ({ to, className, children }) => {
+  const { pathname } = useRouter()
+
+  if (pathname !== '/') {
+    return <Link href={`/#${to}`} className={className}>{children}</Link>
+  }
+
+  return <LinkScroll className={className} to={to} href={`#${to}`} smooth={true} offset={-72}>{children}</LinkScroll>
+}
 
 const LANGUAGES = [
   { value: 'es', label: 'ES' },
@@ -30,17 +42,21 @@ const Navbar = () => {
         <nav aria-label={t.nav.main}>
           <ul className='flex items-center gap-7 text-sm'>
             <li>
-              <LinkScroll className={navLinkClass} to="skills" smooth={true} offset={-72}>{t.nav.skills}</LinkScroll>
+              <SectionLink className={navLinkClass} to="skills">{t.nav.skills}</SectionLink>
             </li>
             <li>
-              <LinkScroll className={navLinkClass} to="projects" smooth={true} offset={-72}>{t.nav.projects}</LinkScroll>
+              <SectionLink className={navLinkClass} to="projects">{t.nav.projects}</SectionLink>
             </li>
             <li>
-              <LinkScroll
-                className='inline-flex items-center min-h-[36px] px-3.5 rounded-lg border border-zinc-700 text-zinc-50 cursor-pointer transition-colors hover:border-accent hover:text-accent'
-                to="contact"
-                smooth={true}
-                offset={-72}>{t.nav.contact}</LinkScroll>
+              <Link
+                href="/blog"
+                aria-current={router.pathname.startsWith('/blog') ? 'page' : undefined}
+                className={`transition-colors hover:text-accent ${router.pathname.startsWith('/blog') ? 'text-accent' : 'text-zinc-400'}`}>
+                {t.nav.blog}
+              </Link>
+            </li>
+            <li>
+              <SectionLink className={contactClass} to="contact">{t.nav.contact}</SectionLink>
             </li>
             <li>
               <div role="group" aria-label={t.nav.language} className='flex gap-0.5 rounded-lg border border-line bg-raised p-0.5'>
