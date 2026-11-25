@@ -22,6 +22,7 @@ Personal portfolio site (victorvillazon.com) built with Next.js (Pages Router), 
   - Filter tabs match `card.type` exactly; add a `filters` entry when introducing a new type.
 - `components/Card.jsx` maps `type` to a label and dot color via `TYPES`; unknown types fall back to `TYPES.default`.
 - `components/Navbar.js` uses `react-scroll` to scroll to the element ids `skills`, `projects` and `contact` (with `offset={-72}` for the sticky header). `pages/blog/index.js` is a placeholder.
+- SEO: every page renders `components/Seo.jsx` (title, description, canonical, hreflang, Open Graph, Twitter, JSON-LD). Absolute URLs come from `lib/site.js` (`SITE_URL` is the www domain, the final one after the 308 redirect). `/api/og` generates the 1200x630 share image, `/sitemap.xml` is `pages/sitemap.xml.js` and `public/robots.txt` points to it.
 - StarField generates star positions with a fixed-seed PRNG so server and client markup match; its keyframes and classes (`.sky`, `.twinkle-*`, `.nebula-*`, `.shooting-star`) live in `styles/globals.css` and are disabled under `prefers-reduced-motion`.
 - `pages/_index.js`, `pages/api/hello.js`, and `styles/Home.module.css` are leftover create-next-app boilerplate (the leading underscore keeps `_index.js` from being a route).
 

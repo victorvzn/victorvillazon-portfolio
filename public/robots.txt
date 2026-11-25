@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Allow: /api/og
+Disallow: /_index
+
+Sitemap: https://www.victorvillazon.com/sitemap.xml
