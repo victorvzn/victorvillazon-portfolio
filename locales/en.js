@@ -1,7 +1,8 @@
 const en = {
   meta: {
     title: 'Victor Villazón · Senior Frontend Developer · Fullstack with Next.js',
-    description: 'Victor Villazón, Senior Frontend Developer who builds complete products with Next.js. SaaS and fintech with Vue.js, React, TypeScript, Node.js and SQL databases.'
+    description: 'Victor Villazón, Senior Frontend Developer who builds complete products with Next.js. SaaS and fintech with Vue.js, React, TypeScript, Node.js and SQL databases.',
+    ogTitle: 'End-to-end SaaS and fintech products, with code that lasts'
   },
   nav: {
     home: 'Home - Victor Villazón',
@@ -59,7 +60,7 @@ const en = {
     subtitle: 'Message me on LinkedIn or check out my code on GitHub.'
   },
   blog: {
-    metaTitle: 'Blog · Victor Villazón',
+    metaTitle: 'Web development blog: HTML, CSS and JavaScript · Victor Villazón',
     metaDescription: 'Learn HTML, CSS and JavaScript with real examples: articles for trainee and junior developers.',
     label: 'BLOG',
     title: 'Learn web development with real examples',

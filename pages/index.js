@@ -1,13 +1,13 @@
 import { useState } from 'react'
 
-import Head from 'next/head'
 import Image from 'next/image'
 import { Link as LinkScroll } from 'react-scroll'
 
 import Card from '../components/Card'
+import Seo from '../components/Seo'
+import { AUTHOR, SITE_URL, ogImageUrl } from '../lib/site'
 import { useLocale, useT } from '../locales'
 
-const SITE_URL = 'https://victorvillazon.com'
 const CULQI_DEMO_URL = 'https://afiliate.culqi.com/'
 // Proyectos propios hechos de punta a punta
 const FULL_PRODUCT_ROLE = {
@@ -286,16 +286,41 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <meta charSet="UTF-8" />
+      <Seo
+        title={t.meta.title}
+        description={t.meta.description}
+        path="/"
+        locale={locale}
+        alternates
+        type="profile"
+        image={ogImageUrl({ title: t.meta.ogTitle, subtitle: AUTHOR.jobTitle })}
+        imageAlt={t.meta.title}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'Person',
+              '@id': `${SITE_URL}/#person`,
+              name: AUTHOR.name,
+              jobTitle: AUTHOR.jobTitle,
+              url: SITE_URL,
+              image: AUTHOR.image,
+              sameAs: AUTHOR.sameAs,
+              address: { '@type': 'PostalAddress', addressLocality: 'Chiclayo', addressCountry: 'PE' },
+              knowsAbout: ['Next.js', 'React', 'Vue.js', 'TypeScript', 'Node.js', 'Frontend architecture']
+            },
+            {
+              '@type': 'WebSite',
+              '@id': `${SITE_URL}/#website`,
+              url: SITE_URL,
+              name: AUTHOR.name,
+              inLanguage: ['es', 'en'],
+              publisher: { '@id': `${SITE_URL}/#person` }
+            }
+          ]
+        }}>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{t.meta.title}</title>
-        <meta name="description" content={t.meta.description} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="alternate" hrefLang="es" href={`${SITE_URL}/`} />
-        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/en`} />
-        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} />
-      </Head>
+      </Seo>
 
       <main className='max-w-6xl mx-auto px-6'>
 
@@ -334,7 +359,7 @@ export default function Home() {
             alt={t.hero.photoAlt}
             width={300}
             height={300}
-            priority={true} />
+            preload />
         </section>
 
         {/* Habilidades */}

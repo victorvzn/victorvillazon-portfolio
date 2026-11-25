@@ -1,13 +1,12 @@
 import { useState } from 'react'
 
-import Head from 'next/head'
 import Link from 'next/link'
 
+import Seo from '../../components/Seo'
 import { getAllPosts } from '../../lib/posts'
 import { formatDate } from '../../lib/formatDate'
-import { useT } from '../../locales'
-
-const SITE_URL = 'https://victorvillazon.com'
+import { AUTHOR, SITE_URL, localeUrl, ogImageUrl } from '../../lib/site'
+import { useLocale, useT } from '../../locales'
 
 // Claves de t.blog.series (locales/*.js) en el orden de las pestañas; el frontmatter `series` usa estas mismas claves
 const SERIES = ['html', 'css', 'javascript', 'frameworks', 'backend', 'carrera']
@@ -19,6 +18,7 @@ export const getStaticProps = async () => ({
 export default function Blog({ posts }) {
   const [filter, setFilter] = useState('all')
   const t = useT()
+  const locale = useLocale()
 
   const visiblePosts = posts.filter(post => filter === 'all' || post.series === filter)
 
@@ -27,14 +27,30 @@ export default function Blog({ posts }) {
 
   return (
     <>
-      <Head>
-        <title>{t.blog.metaTitle}</title>
-        <meta name="description" content={t.blog.metaDescription} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="alternate" hrefLang="es" href={`${SITE_URL}/blog`} />
-        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/en/blog`} />
-        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/blog`} />
-      </Head>
+      <Seo
+        title={t.blog.metaTitle}
+        description={t.blog.metaDescription}
+        path="/blog"
+        locale={locale}
+        alternates
+        image={ogImageUrl({ title: t.blog.title, subtitle: 'Blog' })}
+        imageAlt={t.blog.title}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Blog',
+          '@id': `${SITE_URL}/blog#blog`,
+          name: t.blog.title,
+          description: t.blog.metaDescription,
+          url: localeUrl('/blog', locale),
+          inLanguage: 'es',
+          author: { '@type': 'Person', name: AUTHOR.name, url: SITE_URL },
+          blogPost: posts.filter(post => !post.draft).map(post => ({
+            '@type': 'BlogPosting',
+            headline: post.title,
+            url: localeUrl(`/blog/${post.slug}`, 'es'),
+            datePublished: post.date
+          }))
+        }} />
 
       <main className='max-w-6xl mx-auto px-6 pb-24'>
         <section className='flex flex-wrap items-end justify-between gap-6 py-16 md:py-20'>

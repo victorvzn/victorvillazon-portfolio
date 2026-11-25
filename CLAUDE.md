@@ -22,13 +22,14 @@ Personal portfolio site (victorvillazon.com) built with Next.js (Pages Router), 
   - Filter tabs match `card.type` exactly; add a `filters` entry when introducing a new type.
 - `components/Card.jsx` maps `type` to a label and dot color via `TYPES`; unknown types fall back to `TYPES.default`.
 - `components/Navbar.js` uses `react-scroll` to scroll to the element ids `skills`, `projects` and `contact` (with `offset={-72}` for the sticky header). `pages/blog/index.js` is a placeholder.
+- SEO: every page renders `components/Seo.jsx` (title, description, canonical, hreflang, Open Graph, Twitter, JSON-LD). Absolute URLs come from `lib/site.js` (`SITE_URL` is the www domain, the final one after the 308 redirect). `/api/og` generates the 1200x630 share image, `/sitemap.xml` is `pages/sitemap.xml.js` and `public/robots.txt` points to it.
 - StarField generates star positions with a fixed-seed PRNG so server and client markup match; its keyframes and classes (`.sky`, `.twinkle-*`, `.nebula-*`, `.shooting-star`) live in `styles/globals.css` and are disabled under `prefers-reduced-motion`.
-- `pages/_index.js`, `pages/api/hello.js`, and `styles/Home.module.css` are leftover create-next-app boilerplate (the leading underscore keeps `_index.js` from being a route).
+- `pages/api/hello.js` is leftover create-next-app boilerplate.
 
 ## Styling and assets
 
 - Installed Tailwind is 3.2.4: newer palette steps like `zinc-950` / `yellow-950` do not exist. Use the custom tokens in `tailwind.config.js` instead: `space` (page background), `ink`, `surface` (cards), `raised` (chips/controls), `line` (borders), `accent` (amber #fbbf24), plus `react`, `vue`, `next` for card type dots.
-- Fonts are Geist (`font-sans`) and Geist Mono (`font-mono`), loaded via the Google Fonts import in `styles/globals.css`.
+- Fonts are Geist (`font-sans`) and Geist Mono (`font-mono`), loaded with `next/font/google` in `pages/_app.js`, which sets the `--font-geist` / `--font-geist-mono` variables used by `tailwind.config.js`.
 - `npm run dev` re-appends a "nextjs-agent-rules" block to this file; that is expected.
 - Project screenshots live in `public/images/` as `.webp` (recent commits converted card images to webp); reference them as `/images/<name>.webp`.
 

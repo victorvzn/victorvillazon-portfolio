@@ -1,11 +1,10 @@
-import Head from 'next/head'
 import Link from 'next/link'
 
+import Seo from '../../components/Seo'
 import { getAllPosts, getPostBySlug } from '../../lib/posts'
 import { formatDate } from '../../lib/formatDate'
+import { AUTHOR, SITE_URL, localeUrl, ogImageUrl } from '../../lib/site'
 import { useLocale, useT } from '../../locales'
-
-const SITE_URL = 'https://victorvillazon.com'
 
 export const getStaticPaths = async ({ locales }) => ({
   // getAllPosts solo incluye los borradores en dev
@@ -26,22 +25,56 @@ export default function Post({ post }) {
   const locale = useLocale()
   const t = useT()
 
-  const url = `${SITE_URL}${locale === 'en' ? '/en' : ''}/blog/${meta.slug}`
+  // Los posts solo están en español: /en/blog/... apunta su canónica a la versión en español
+  const path = `/blog/${meta.slug}`
+  const url = localeUrl(path, 'es')
+  const seriesName = t.blog.series[meta.series] ?? 'Blog'
+  const image = ogImageUrl({ title: meta.title, subtitle: seriesName })
 
   return (
     <>
-      <Head>
-        <title>{`${meta.title} · Victor Villazón`}</title>
-        <meta name="description" content={meta.description} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href={`${SITE_URL}/blog/${meta.slug}`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content={url} />
+      <Seo
+        title={`${meta.title} · Victor Villazón`}
+        description={meta.description}
+        path={path}
+        locale={locale}
+        canonicalLocale="es"
+        type="article"
+        image={image}
+        imageAlt={meta.title}
+        noindex={meta.draft}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'BlogPosting',
+              headline: meta.title,
+              description: meta.description,
+              image,
+              datePublished: meta.date,
+              dateModified: meta.date,
+              inLanguage: 'es',
+              keywords: meta.tags.join(', '),
+              url,
+              mainEntityOfPage: url,
+              author: { '@type': 'Person', name: AUTHOR.name, url: SITE_URL, sameAs: AUTHOR.sameAs },
+              publisher: { '@type': 'Person', name: AUTHOR.name, url: SITE_URL }
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Inicio', item: localeUrl('/', 'es') },
+                { '@type': 'ListItem', position: 2, name: 'Blog', item: localeUrl('/blog', 'es') },
+                { '@type': 'ListItem', position: 3, name: meta.title, item: url }
+              ]
+            }
+          ]
+        }}>
         <meta property="article:published_time" content={meta.date} />
-        {meta.draft && <meta name="robots" content="noindex, nofollow" />}
-      </Head>
+        <meta property="article:author" content={AUTHOR.sameAs[0]} />
+        {meta.series && <meta property="article:section" content={seriesName} />}
+        {meta.tags.map(tag => <meta key={tag} property="article:tag" content={tag} />)}
+      </Seo>
 
       <main className='mx-auto max-w-3xl px-6 pb-24'>
         <Link href="/blog" className='mt-10 inline-flex min-h-[44px] items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-accent'>
