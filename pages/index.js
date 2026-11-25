@@ -359,7 +359,7 @@ export default function Home() {
             alt={t.hero.photoAlt}
             width={300}
             height={300}
-            priority={true} />
+            preload />
         </section>
 
         {/* Habilidades */}

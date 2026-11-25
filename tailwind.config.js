@@ -20,8 +20,9 @@ module.exports = {
         next: '#fafafa',
       },
       fontFamily: {
-        sans: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
-        mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+        // Las variables las define pages/_app.js con next/font (fuentes servidas desde el propio dominio)
+        sans: ['var(--font-geist)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'ui-monospace', 'monospace'],
       }
     }
   },
