@@ -76,6 +76,13 @@ const en = {
       carrera: 'Career'
     },
     empty: 'No articles in this series yet.',
+    searchLabel: 'Search articles',
+    searchPlaceholder: 'Search a topic: grid, fetch, forms…',
+    searchShortcut: 'Press / to search',
+    clearSearch: 'Clear search',
+    results: (count) => (count === 1 ? '1 article' : `${count} articles`),
+    noResults: (query) => `No articles found for “${query}”.`,
+    noResultsHint: 'Try another word or check the other series. Articles are in Spanish.',
     spanishOnly: 'Articles are written in Spanish for now.',
     minRead: 'min read',
     draft: 'Draft',

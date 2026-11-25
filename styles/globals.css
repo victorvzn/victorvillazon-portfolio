@@ -76,6 +76,9 @@ body {
 .hljs-deletion { color: #fca5a5; }
 .hljs-addition { color: #86efac; }
 
+/* Buscador del blog: se oculta la "x" nativa de Chrome/Safari porque la página trae su propio botón */
+.blog-search::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+
 /* ---------- Fondo animado (components/StarField.jsx) ---------- */
 
 .sky {

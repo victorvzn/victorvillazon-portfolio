@@ -76,6 +76,13 @@ const es = {
       carrera: 'Carrera'
     },
     empty: 'Todavía no hay artículos en esta serie.',
+    searchLabel: 'Buscar artículos',
+    searchPlaceholder: 'Busca un tema: grid, fetch, formularios…',
+    searchShortcut: 'Pulsa / para buscar',
+    clearSearch: 'Borrar búsqueda',
+    results: (count) => (count === 1 ? '1 artículo' : `${count} artículos`),
+    noResults: (query) => `No encontré artículos sobre «${query}».`,
+    noResultsHint: 'Prueba con otra palabra o revisa las otras series.',
     spanishOnly: null,
     minRead: 'min de lectura',
     draft: 'Borrador',
