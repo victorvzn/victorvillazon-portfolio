@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { getAllSlugs, getPostBySlug } from '../../lib/posts'
+import { getAllPosts, getPostBySlug } from '../../lib/posts'
 import { formatDate } from '../../lib/formatDate'
 import { useLocale, useT } from '../../locales'
 
 const SITE_URL = 'https://victorvillazon.com'
 
 export const getStaticPaths = async ({ locales }) => ({
-  // Incluye los borradores para poder revisarlos online desde /blog/borradores
-  paths: getAllSlugs().flatMap(slug => locales.map(locale => ({ params: { slug }, locale }))),
+  // getAllPosts solo incluye los borradores en dev
+  paths: getAllPosts().flatMap(post => locales.map(locale => ({ params: { slug: post.slug }, locale }))),
   // En dev, `next dev` cachea estas rutas y un .md nuevo daría 404 hasta reiniciar;
   // 'blocking' lo resuelve en la petición (getStaticProps devuelve notFound si no existe)
   fallback: process.env.NODE_ENV === 'development' ? 'blocking' : false
@@ -44,7 +44,7 @@ export default function Post({ post }) {
       </Head>
 
       <main className='mx-auto max-w-3xl px-6 pb-24'>
-        <Link href={meta.draft ? '/blog/borradores' : '/blog'} className='mt-10 inline-flex min-h-[44px] items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-accent'>
+        <Link href="/blog" className='mt-10 inline-flex min-h-[44px] items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-accent'>
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
           {t.blog.back}
         </Link>
