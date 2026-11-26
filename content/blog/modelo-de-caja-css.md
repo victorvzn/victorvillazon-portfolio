@@ -1,11 +1,10 @@
 ---
 title: 'El modelo de caja de CSS explicado con una caja de pizza'
 description: 'margin, border, padding y content: entiende por qué tus elementos miden más de lo que dices y cómo lo arregla box-sizing.'
-date: 2026-11-25
+date: 2026-11-26
 series: css
 tags: [CSS, Fundamentos]
-draft: true
-order: 2
+draft: false
 ---
 
 Para CSS, **todo es una caja**. Un párrafo, un botón, una imagen: todos son rectángulos. Si entiendes cómo se mide esa caja, la mitad de tus problemas de diseño desaparecen.

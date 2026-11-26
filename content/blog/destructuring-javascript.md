@@ -1,11 +1,10 @@
 ---
 title: 'Destructuring: saca datos de objetos y arrays como un pro'
 description: 'Deja de escribir usuario.nombre, usuario.email, usuario.edad. Con destructuring lo haces en una línea.'
-date: 2026-11-25
+date: 2026-11-26
 series: javascript
 tags: [JavaScript, ES6]
-draft: true
-order: 3
+draft: false
 ---
 
 Si alguna vez escribiste algo así, este post es para ti:

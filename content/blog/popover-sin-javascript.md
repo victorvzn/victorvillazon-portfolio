@@ -1,11 +1,10 @@
 ---
 title: 'Popover: menús y avisos flotantes sin JavaScript'
 description: 'Con el atributo popover, HTML abre y cierra paneles flotantes por ti. Ideal para menús, avisos y notificaciones.'
-date: 2026-11-25
+date: 2026-11-26
 series: html
 tags: [HTML, CSS]
-draft: true
-order: 1
+draft: false
 ---
 
 En el post del modal vimos `<dialog>`. Pero no todo lo que flota tiene que bloquear la página: un menú, un panel de notificaciones o un aviso solo necesitan **aparecer encima y cerrarse fácil**. Para eso existe el atributo `popover`.
