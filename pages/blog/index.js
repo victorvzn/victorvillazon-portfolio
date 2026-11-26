@@ -35,6 +35,9 @@ export default function Blog({ posts }) {
     [index, deferredQuery, filter]
   )
 
+  // Los borradores solo se ven en dev: no cuentan en el total
+  const publishedCount = posts.filter(post => !post.draft).length
+
   // Solo se muestran las pestañas de series que ya tienen artículos
   const tabs = ['all', ...SERIES.filter(series => posts.some(post => post.series === series))]
 
@@ -104,7 +107,10 @@ export default function Blog({ posts }) {
       <main className='max-w-6xl mx-auto px-6 pb-24'>
         <section className='flex flex-wrap items-end justify-between gap-6 py-16 md:py-20'>
           <div className='flex flex-col gap-3'>
-            <p className='font-mono text-[13px] tracking-[0.08em] text-accent'>{t.blog.label}</p>
+            <p className='font-mono text-[13px] tracking-[0.08em] text-accent'>
+              {t.blog.label}
+              <span className='text-zinc-500'> · {t.blog.postCount(publishedCount)}</span>
+            </p>
             <h1 className='text-4xl font-bold tracking-tight md:text-5xl'>{t.blog.title}</h1>
             <p className='max-w-xl text-lg leading-relaxed text-zinc-400'>{t.blog.subtitle}</p>
             {t.blog.spanishOnly && (
