@@ -166,7 +166,7 @@ export default function Blog({ posts }) {
         <section className='flex flex-col gap-3 pt-16 pb-8 md:pt-20'>
           <p className='font-mono text-[13px] tracking-[0.08em] text-accent'>{t.blog.label}</p>
           <h1 className='text-4xl font-bold tracking-tight md:text-5xl'>{t.blog.title}</h1>
-          <p className='max-w-xl text-lg leading-relaxed text-zinc-400'>{t.blog.subtitle}</p>
+          <p className='text-lg leading-relaxed text-zinc-400'>{t.blog.subtitle}</p>
           {t.blog.spanishOnly && (
             <p className='self-start rounded-lg border border-line bg-raised px-3 py-1.5 text-sm text-zinc-300'>{t.blog.spanishOnly}</p>
           )}
