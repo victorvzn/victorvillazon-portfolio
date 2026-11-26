@@ -83,6 +83,7 @@ const es = {
       css: 'Del modelo de caja a Grid: cómo se aplican los estilos, cómo se colocan las cosas y cómo se adaptan.',
       javascript: 'Desde let y const hasta las novedades del lenguaje que ya se usan en el trabajo.',
       ejercicios: 'Practica lo aprendido con ejercicios y pruebas técnicas reales. La solución siempre está oculta.',
+      frameworks: 'Las herramientas que se usan en los proyectos reales, explicadas desde lo que ya sabes de HTML, CSS y JavaScript.',
       carrera: 'Las herramientas del día a día de un desarrollador y cómo publicar tu trabajo para que el mundo lo vea.'
     },
     series: {

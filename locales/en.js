@@ -83,6 +83,7 @@ const en = {
       css: 'From the box model to Grid: how styles apply, how things are laid out and how they adapt.',
       javascript: 'From let and const to the newest language features already used at work.',
       ejercicios: 'Practice what you learned with exercises and real technical tests. The solution is always hidden.',
+      frameworks: 'The tools used in real projects, explained from what you already know about HTML, CSS and JavaScript.',
       carrera: "A developer's everyday tools and how to publish your work for the world to see."
     },
     series: {
