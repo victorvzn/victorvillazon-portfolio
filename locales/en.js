@@ -82,7 +82,8 @@ const en = {
       html: 'Meaningful tags, forms, native components and a site that loads fast.',
       css: 'From the box model to Grid: how styles apply, how things are laid out and how they adapt.',
       javascript: 'From let and const to the newest language features already used at work.',
-      ejercicios: 'Practice what you learned with exercises and real technical tests. The solution is always hidden.'
+      ejercicios: 'Practice what you learned with exercises and real technical tests. The solution is always hidden.',
+      carrera: "A developer's everyday tools and how to publish your work for the world to see."
     },
     series: {
       html: 'HTML',

@@ -82,7 +82,8 @@ const es = {
       html: 'Etiquetas con significado, formularios, componentes nativos y una web que carga rápido.',
       css: 'Del modelo de caja a Grid: cómo se aplican los estilos, cómo se colocan las cosas y cómo se adaptan.',
       javascript: 'Desde let y const hasta las novedades del lenguaje que ya se usan en el trabajo.',
-      ejercicios: 'Practica lo aprendido con ejercicios y pruebas técnicas reales. La solución siempre está oculta.'
+      ejercicios: 'Practica lo aprendido con ejercicios y pruebas técnicas reales. La solución siempre está oculta.',
+      carrera: 'Las herramientas del día a día de un desarrollador y cómo publicar tu trabajo para que el mundo lo vea.'
     },
     series: {
       html: 'HTML',

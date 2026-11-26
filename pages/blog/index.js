@@ -21,6 +21,7 @@ const SERIES_COLORS = {
   css: { dot: 'bg-blue-400', text: 'text-blue-400', border: 'border-blue-400' },
   javascript: { dot: 'bg-yellow-400', text: 'text-yellow-400', border: 'border-yellow-400' },
   ejercicios: { dot: 'bg-green-400', text: 'text-green-400', border: 'border-green-400' },
+  carrera: { dot: 'bg-purple-400', text: 'text-purple-400', border: 'border-purple-400' },
   default: { dot: 'bg-zinc-400', text: 'text-zinc-400', border: 'border-zinc-400' }
 }
 
