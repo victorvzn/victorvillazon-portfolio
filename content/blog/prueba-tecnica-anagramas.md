@@ -4,7 +4,7 @@ description: 'Un ejercicio clásico de entrevista para junior: comprobar si dos 
 date: 2026-11-26
 series: ejercicios
 tags: [JavaScript, Pruebas técnicas, Lógica]
-draft: true
+draft: false
 ---
 
 Este ejercicio aparece en muchísimas pruebas técnicas para junior. Es corto, pero deja ver cómo piensas: si limpias los datos, si piensas en casos raros y si conoces más de una forma de resolverlo.

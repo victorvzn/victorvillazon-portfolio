@@ -4,7 +4,7 @@ description: 'FizzBuzz, palíndromos, vocales y más: cinco ejercicios clásicos
 date: 2026-11-26
 series: ejercicios
 tags: [JavaScript, Lógica, Ejercicios]
-draft: true
+draft: false
 ---
 
 Programar no es memorizar métodos: es **partir un problema en pasos pequeños**. Y eso se entrena como un músculo, con ejercicios.
