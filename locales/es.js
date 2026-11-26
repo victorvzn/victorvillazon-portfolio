@@ -71,6 +71,7 @@ const es = {
       html: 'HTML',
       css: 'CSS',
       javascript: 'JavaScript',
+      ejercicios: 'Ejercicios',
       frameworks: 'Frameworks',
       backend: 'Backend',
       carrera: 'Carrera'

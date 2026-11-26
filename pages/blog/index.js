@@ -11,7 +11,7 @@ import { AUTHOR, SITE_URL, localeUrl, ogImageUrl } from '../../lib/site'
 import { useLocale, useT } from '../../locales'
 
 // Claves de t.blog.series (locales/*.js) en el orden de las pestañas; el frontmatter `series` usa estas mismas claves
-const SERIES = ['html', 'css', 'javascript', 'frameworks', 'backend', 'carrera']
+const SERIES = ['html', 'css', 'javascript', 'ejercicios', 'frameworks', 'backend', 'carrera']
 
 export const getStaticProps = async () => ({
   props: { posts: getAllPosts() }

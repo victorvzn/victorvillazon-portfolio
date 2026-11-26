@@ -63,6 +63,41 @@ body {
   border-color: transparent transparent transparent currentColor;
 }
 
+/* Solución oculta de un ejercicio (lib/remarkSolution.js) */
+.prose-post details.solution {
+  @apply rounded-xl border border-line bg-surface/60 px-5 py-4;
+}
+
+.prose-post details.solution > summary {
+  @apply flex min-h-[44px] cursor-pointer list-none items-center gap-3 font-medium text-accent;
+}
+
+.prose-post details.solution > summary::-webkit-details-marker { display: none; }
+
+.prose-post details.solution > summary::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent currentColor;
+  transition: transform 150ms ease;
+}
+
+.prose-post details.solution[open] > summary::before { transform: rotate(90deg); }
+
+.prose-post details.solution > summary:focus-visible {
+  @apply rounded-md outline outline-2 outline-offset-4 outline-accent;
+}
+
+.prose-post details.solution[open] > summary { @apply mb-2; }
+
+.prose-post details.solution > * + * { @apply mt-5; }
+
+@media (prefers-reduced-motion: reduce) {
+  .prose-post details.solution > summary::before { transition: none; }
+}
+
 /* Resaltado de código (clases de rehype-highlight / highlight.js) */
 .hljs { @apply text-zinc-200; }
 .hljs-comment, .hljs-quote { @apply italic text-zinc-500; }
