@@ -57,15 +57,19 @@ Mismo resultado, sin escribir ni una línea en un archivo CSS y sin inventar el 
 
 ## Pruébalo sin instalar nada
 
-Para practicar, Tailwind tiene un **script para el navegador**: lo pegas en tu HTML y ya puedes usar las clases. Todos los ejemplos de este post lo llevan en la primera línea:
+Todos los ejemplos de este post abren el playground con Tailwind ya cargado, así que solo tienes que escribir las clases:
 
-```html playground=primero
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+```html playground=primero libs=tailwind
 <div class="p-8">
   <h1 class="text-3xl font-bold text-blue-600">¡Hola, Tailwind!</h1>
   <p class="mt-2 text-gray-600">Si este texto es gris y el título azul, todo funciona.</p>
 </div>
+```
+
+Para practicar en un archivo HTML propio, Tailwind tiene un **script para el navegador**. Pégalo en el `<head>` y ya puedes usar las clases:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 ```
 
 Este script es solo para **aprender y hacer pruebas**: genera el CSS en el navegador cada vez que carga la página. En un proyecto real se instala (te lo explico al final).
@@ -93,9 +97,7 @@ Casi todas las clases siguen el patrón **`propiedad-valor`**. Aprendiendo unos 
 
 El patrón es **`propiedad-color-intensidad`**. La intensidad va de **50** (casi blanco) a **950** (casi negro):
 
-```html playground=colores
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+```html playground=colores libs=tailwind
 <div class="flex gap-2 p-6">
   <div class="h-16 flex-1 rounded bg-amber-100"></div>
   <div class="h-16 flex-1 rounded bg-amber-300"></div>
@@ -137,9 +139,7 @@ El patrón es **`propiedad-color-intensidad`**. La intensidad va de **50** (casi
 
 Las clases de layout son casi idénticas a las propiedades de CSS:
 
-```html playground=layout
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+```html playground=layout libs=tailwind
 <!-- Flexbox: una barra con logo a la izquierda y botones a la derecha -->
 <header class="flex items-center justify-between bg-gray-900 p-4 text-white">
   <strong class="text-xl">MiTienda</strong>
@@ -181,9 +181,7 @@ Aquí es donde Tailwind brilla. En vez de escribir media queries, pones un **pre
 
 Funciona **mobile first**, igual que en el post de media queries: la clase sin prefijo es para el móvil, y los prefijos **añaden** cambios en pantallas más grandes.
 
-```html playground=responsive
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+```html playground=responsive libs=tailwind
 <div class="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-4">
   <div class="rounded-lg bg-blue-100 p-6">A</div>
   <div class="rounded-lg bg-blue-100 p-6">B</div>
@@ -200,9 +198,7 @@ Se lee así: "una columna; desde `sm`, dos; desde `lg`, cuatro". Haz la ventana 
 
 Igual que los tamaños de pantalla, los **estados** también son prefijos:
 
-```html playground=estados
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+```html playground=estados libs=tailwind
 <div class="flex flex-col gap-4 p-6 max-w-xs">
   <button class="rounded-lg bg-gray-900 px-4 py-2 text-white transition hover:bg-gray-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:scale-95">
     Pasa el ratón y pulsa
@@ -225,9 +221,7 @@ Igual que los tamaños de pantalla, los **estados** también son prefijos:
 
 El prefijo **`dark:`** aplica la clase cuando el usuario tiene el **modo oscuro** activado en su sistema:
 
-```html playground=oscuro
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+```html playground=oscuro libs=tailwind
 <div class="min-h-screen bg-white p-8 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
   <div class="rounded-xl border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
     <h2 class="text-xl font-bold">Mi tarjeta</h2>
@@ -238,9 +232,7 @@ El prefijo **`dark:`** aplica la clase cuando el usuario tiene el **modo oscuro*
 
 ## Todo junto: una tarjeta de perfil
 
-```html playground=tarjeta
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+```html playground=tarjeta libs=tailwind
 <div class="flex min-h-screen items-center justify-center bg-gray-100 p-4">
   <article class="w-full max-w-sm rounded-2xl bg-white p-6 text-center shadow-lg">
     <img
