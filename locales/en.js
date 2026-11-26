@@ -107,6 +107,7 @@ const en = {
     minRead: 'min read',
     draft: 'Draft',
     back: 'Back to the blog',
+    backToTop: 'Back to top',
     video: 'Watch the video version',
     ctaTitle: 'Did this article help?',
     ctaText: "Tell me which topic you'd like next, or message me if you're building something.",

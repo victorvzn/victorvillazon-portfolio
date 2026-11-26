@@ -107,6 +107,7 @@ const es = {
     minRead: 'min de lectura',
     draft: 'Borrador',
     back: 'Volver al blog',
+    backToTop: 'Volver arriba',
     video: 'Mira la versión en video',
     ctaTitle: '¿Te sirvió este artículo?',
     ctaText: 'Cuéntame qué tema quieres que trate después o escríbeme si estás construyendo algo.',

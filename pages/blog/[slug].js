@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import BackToTop from '../../components/BackToTop'
 import Seo from '../../components/Seo'
 import { getAllPosts, getPostBySlug } from '../../lib/posts'
 import { formatDate } from '../../lib/formatDate'
@@ -128,6 +129,8 @@ export default function Post({ post }) {
           </a>
         </aside>
       </main>
+
+      <BackToTop label={t.blog.backToTop} />
     </>
   )
 }
