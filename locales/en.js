@@ -67,8 +67,6 @@ const en = {
     subtitle: 'Search a topic or follow the index: each series goes from the basics to advanced topics.',
     filterLabel: 'Filter by series',
     all: 'All',
-    levelFilterLabel: 'Filter by level',
-    allLevels: 'All levels',
     levels: {
       basic: 'Beginner',
       intermediate: 'Intermediate',
@@ -84,6 +82,7 @@ const en = {
       javascript: 'From let and const to the newest language features already used at work.',
       ejercicios: 'Practice what you learned with exercises and real technical tests. The solution is always hidden.',
       frameworks: 'The tools used in real projects, explained from what you already know about HTML, CSS and JavaScript.',
+      backend: 'JavaScript outside the browser: Node.js, files, servers and your own APIs.',
       carrera: "A developer's everyday tools and how to publish your work for the world to see."
     },
     series: {
@@ -102,7 +101,7 @@ const en = {
     clearSearch: 'Clear search',
     statusAll: 'All articles, in reading order.',
     statusQuery: (query) => `Results for “${query}”.`,
-    statusFiltered: 'Articles filtered by series and level.',
+    statusFiltered: 'Articles filtered by series.',
     noResults: (query) => `No articles found for “${query}”.`,
     noResultsHint: 'Try another word or check the other series. Articles are in Spanish.',
     spanishOnly: 'Articles are written in Spanish for now.',

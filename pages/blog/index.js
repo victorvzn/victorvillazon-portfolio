@@ -13,8 +13,6 @@ import { useLocale, useT } from '../../locales'
 // Claves de t.blog.series (locales/*.js) en el orden del índice; el frontmatter `series` usa estas mismas claves
 const SERIES = ['html', 'css', 'javascript', 'ejercicios', 'frameworks', 'backend', 'carrera']
 
-const LEVELS = ['basic', 'intermediate', 'advanced']
-
 // Color de cada serie: punto, números y círculos de los módulos
 const SERIES_COLORS = {
   html: { dot: 'bg-orange-400', text: 'text-orange-400', border: 'border-orange-400' },
@@ -22,6 +20,7 @@ const SERIES_COLORS = {
   javascript: { dot: 'bg-yellow-400', text: 'text-yellow-400', border: 'border-yellow-400' },
   ejercicios: { dot: 'bg-green-400', text: 'text-green-400', border: 'border-green-400' },
   frameworks: { dot: 'bg-cyan-400', text: 'text-cyan-400', border: 'border-cyan-400' },
+  backend: { dot: 'bg-rose-400', text: 'text-rose-400', border: 'border-rose-400' },
   carrera: { dot: 'bg-purple-400', text: 'text-purple-400', border: 'border-purple-400' },
   default: { dot: 'bg-zinc-400', text: 'text-zinc-400', border: 'border-zinc-400' }
 }
@@ -53,7 +52,6 @@ function FilterGroup({ label, options, value, onChange }) {
 
 export default function Blog({ posts }) {
   const [filter, setFilter] = useState('all')
-  const [level, setLevel] = useState('all')
   const [query, setQuery] = useState('')
   const searchRef = useRef(null)
   const router = useRouter()
@@ -75,26 +73,19 @@ export default function Blog({ posts }) {
       .map(section => ({
         ...section,
         modules: section.modules
-          .filter(module => level === 'all' || module.level === level)
           .map(module => ({ ...module, posts: module.posts.filter(post => matching.has(post.slug)) }))
           .filter(module => module.posts.length)
       }))
       .filter(section => section.modules.length)
-  }, [allSections, index, deferredQuery, filter, level])
+  }, [allSections, index, deferredQuery, filter])
 
   // Solo se muestran los filtros que tienen artículos
   const seriesOptions = [
     { value: 'all', label: t.blog.all },
     ...allSections.map(section => ({ value: section.series, label: t.blog.series[section.series] ?? section.series }))
   ]
-  const levelOptions = [
-    { value: 'all', label: t.blog.allLevels },
-    ...LEVELS
-      .filter(value => allSections.some(section => section.modules.some(module => module.level === value)))
-      .map(value => ({ value, label: t.blog.levels[value] }))
-  ]
 
-  const filtering = searching || filter !== 'all' || level !== 'all'
+  const filtering = searching || filter !== 'all'
   const statusText = searching
     ? t.blog.statusQuery(deferredQuery.trim())
     : filtering ? t.blog.statusFiltered : t.blog.statusAll
@@ -133,7 +124,6 @@ export default function Blog({ posts }) {
   const clearAll = () => {
     setQuery('')
     setFilter('all')
-    setLevel('all')
     searchRef.current?.focus()
   }
 
@@ -204,9 +194,7 @@ export default function Blog({ posts }) {
           </div>
 
           <div className='flex flex-wrap items-center justify-between gap-3'>
-            {seriesOptions.length > 2 && <FilterGroup label={t.blog.filterLabel} options={seriesOptions} value={filter} onChange={setFilter} />}
-            {levelOptions.length > 2 && <FilterGroup label={t.blog.levelFilterLabel} options={levelOptions} value={level} onChange={setLevel} />}
-          </div>
+            {seriesOptions.length > 2 && <FilterGroup label={t.blog.filterLabel} options={seriesOptions} value={filter} onChange={setFilter} />}          </div>
 
           <p id="resultados-busqueda" role="status" className='text-sm text-zinc-400'>{statusText}</p>
         </section>
