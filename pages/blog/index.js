@@ -11,7 +11,7 @@ import { AUTHOR, SITE_URL, localeUrl, ogImageUrl } from '../../lib/site'
 import { useLocale, useT } from '../../locales'
 
 // Claves de t.blog.series (locales/*.js) en el orden del índice; el frontmatter `series` usa estas mismas claves
-const SERIES = ['html', 'css', 'javascript', 'ejercicios', 'frameworks', 'backend', 'carrera']
+const SERIES = ['html', 'css', 'javascript', 'typescript', 'python', 'ejercicios', 'frameworks', 'testing', 'backend', 'devops', 'seguridad', 'carrera']
 
 // Color de cada serie: punto, números y círculos de los módulos
 const SERIES_COLORS = {
@@ -20,7 +20,12 @@ const SERIES_COLORS = {
   javascript: { dot: 'bg-yellow-400', text: 'text-yellow-400', border: 'border-yellow-400' },
   ejercicios: { dot: 'bg-green-400', text: 'text-green-400', border: 'border-green-400' },
   frameworks: { dot: 'bg-cyan-400', text: 'text-cyan-400', border: 'border-cyan-400' },
+  typescript: { dot: 'bg-sky-400', text: 'text-sky-400', border: 'border-sky-400' },
+  python: { dot: 'bg-emerald-400', text: 'text-emerald-400', border: 'border-emerald-400' },
+  seguridad: { dot: 'bg-red-400', text: 'text-red-400', border: 'border-red-400' },
+  testing: { dot: 'bg-lime-400', text: 'text-lime-400', border: 'border-lime-400' },
   backend: { dot: 'bg-rose-400', text: 'text-rose-400', border: 'border-rose-400' },
+  devops: { dot: 'bg-indigo-400', text: 'text-indigo-400', border: 'border-indigo-400' },
   carrera: { dot: 'bg-purple-400', text: 'text-purple-400', border: 'border-purple-400' },
   default: { dot: 'bg-zinc-400', text: 'text-zinc-400', border: 'border-zinc-400' }
 }

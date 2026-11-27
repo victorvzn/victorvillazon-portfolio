@@ -82,7 +82,12 @@ const es = {
       javascript: 'Desde let y const hasta las novedades del lenguaje que ya se usan en el trabajo.',
       ejercicios: 'Practica lo aprendido con ejercicios y pruebas técnicas reales. La solución siempre está oculta.',
       frameworks: 'Las herramientas que se usan en los proyectos reales, explicadas desde lo que ya sabes de HTML, CSS y JavaScript.',
-      backend: 'JavaScript fuera del navegador: Node.js, archivos, servidores y tus propias APIs.',
+      backend: 'JavaScript fuera del navegador: Node.js, Express, bases de datos y tus propias APIs.',
+      typescript: 'JavaScript con tipos: detecta errores antes de ejecutar y valida datos de verdad con Zod.',
+      python: 'El lenguaje más popular para empezar: de las variables a la POO, los decoradores, asyncio y tu propia API con FastAPI.',
+      seguridad: 'Cifrado, ataques web y cómo defender tu frontend y tus integraciones, explicado sin miedo.',
+      testing: 'Pruebas automáticas con Vitest y Testing Library, y cómo trabajar con TDD.',
+      devops: 'Del "en mi máquina funciona" a internet: contenedores con Docker y la nube de AWS.',
       carrera: 'Las herramientas del día a día de un desarrollador y cómo publicar tu trabajo para que el mundo lo vea.'
     },
     series: {
@@ -92,6 +97,11 @@ const es = {
       ejercicios: 'Ejercicios',
       frameworks: 'Frameworks',
       backend: 'Backend',
+      typescript: 'TypeScript',
+      python: 'Python',
+      seguridad: 'Seguridad',
+      testing: 'Testing',
+      devops: 'DevOps',
       carrera: 'Carrera'
     },
     empty: 'Todavía no hay artículos en esta serie.',
