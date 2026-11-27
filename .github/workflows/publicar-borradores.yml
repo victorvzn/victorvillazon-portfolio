@@ -1,0 +1,66 @@
+# Publica cada día los siguientes borradores del blog (scripts/publicar-borradores.mjs) y hace push a main;
+# Vercel despliega el push.
+#
+# Pausar:     GitHub → Actions → "Publicar borradores" → Disable workflow  (o: gh workflow disable publicar-borradores.yml)
+#             o crear la variable de repositorio PUBLICACION_ACTIVA = false
+# Reactivar:  Enable workflow  (o: gh workflow enable publicar-borradores.yml). Sigue donde iba.
+# A mano:     Actions → "Publicar borradores" → Run workflow (eligiendo la cantidad)
+# Cuando no quedan borradores, se desactiva solo.
+
+name: Publicar borradores
+
+on:
+  schedule:
+    - cron: '0 13 * * *' # 13:00 UTC = 8:00 en Lima
+  workflow_dispatch:
+    inputs:
+      cantidad:
+        description: 'Cuántos posts publicar (vacío = POSTS_POR_DIA)'
+        required: false
+        default: ''
+
+# Cuántos posts se publican cada día: cambia solo este número
+env:
+  POSTS_POR_DIA: 8
+
+permissions:
+  contents: write # hacer commit y push
+  actions: write  # desactivar el workflow cuando no queden borradores
+
+concurrency:
+  group: publicar-borradores
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    if: vars.PUBLICACION_ACTIVA != 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Elegir y publicar los siguientes borradores
+        id: publicar
+        run: node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/publicar-borradores.mjs --cantidad "${{ inputs.cantidad || env.POSTS_POR_DIA }}"
+
+      - name: Commit y push
+        if: steps.publicar.outputs.publicados != '0'
+        env:
+          PUBLICADOS: ${{ steps.publicar.outputs.publicados }}
+          QUEDAN: ${{ steps.publicar.outputs.quedan }}
+          TITULOS: ${{ steps.publicar.outputs.titulos }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/blog
+          git commit -m "Publica $PUBLICADOS posts del blog (quedan $QUEDAN borradores)" -m "$TITULOS"
+          git push
+
+      - name: Desactivar el workflow si ya no quedan borradores
+        if: steps.publicar.outputs.quedan == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow disable publicar-borradores.yml --repo "${{ github.repository }}"

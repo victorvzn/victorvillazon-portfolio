@@ -18,6 +18,22 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Publicación automática del blog
+
+Cada día a las 8:00 (hora de Lima) el workflow `.github/workflows/publicar-borradores.yml` publica los siguientes 8 borradores (`draft: true` → `draft: false`, con la fecha del día), hace commit en `main` y Vercel despliega. Para cambiar cuántos salen al día, edita `POSTS_POR_DIA` al principio del workflow. El orden lo decide `scripts/publicar-borradores.mjs`: alterna series y sigue el orden de lectura de `lib/blogStructure.js`.
+
+| Quiero… | Cómo |
+| --- | --- |
+| Ver qué saldrá mañana | `node scripts/publicar-borradores.mjs --simular` |
+| Pausarlo | Actions → "Publicar borradores" → **Disable workflow**, o `gh workflow disable publicar-borradores.yml`, o la variable de repositorio `PUBLICACION_ACTIVA=false` |
+| Reactivarlo | **Enable workflow** o `gh workflow enable publicar-borradores.yml` (sigue donde iba) |
+| Publicar ahora / más un día concreto | Actions → **Run workflow** con la cantidad |
+| Que un post no salga todavía | Ponerle `draft: hold` |
+| Deshacer una publicación | `git revert` del commit del bot |
+| Quitarlo | Borrar el workflow y el script |
+
+Cuando no quedan borradores, el workflow se desactiva solo. Haz `git pull` antes de trabajar en local: el bot hace commits en `main`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
