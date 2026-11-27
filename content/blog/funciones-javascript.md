@@ -1,10 +1,10 @@
 ---
 title: 'Funciones en JavaScript: escribe una vez, usa mil veces'
 description: 'Qué es una función, cómo pasarle datos con parámetros, para qué sirve return y cómo darle valores por defecto. Explicado con una receta de cocina.'
-date: 2026-11-26
+date: 2026-11-27
 series: javascript
 tags: [JavaScript, Fundamentos, Funciones]
-draft: true
+draft: false
 ---
 
 Una **función** es un bloque de código con nombre que puedes ejecutar cuando quieras. Es como una **receta**: la escribes una vez y la usas cada vez que quieras cocinar ese plato, cambiando los ingredientes si hace falta.

@@ -1,10 +1,10 @@
 ---
 title: '5 ejercicios con arrays y objetos (con solución oculta)'
 description: 'Eliminar duplicados, contar palabras, agrupar por categoría y más. Los ejercicios que de verdad vas a usar en tu trabajo diario.'
-date: 2026-11-26
+date: 2026-11-27
 series: ejercicios
 tags: [JavaScript, Lógica, Ejercicios, Arrays]
-draft: true
+draft: false
 ---
 
 Si en el día a día como frontend hay algo que vas a hacer **siempre**, es transformar datos: una lista que llega de una API y que tienes que filtrar, contar o agrupar antes de mostrarla.

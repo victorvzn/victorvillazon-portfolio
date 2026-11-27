@@ -1,10 +1,10 @@
 ---
 title: 'Bucles en JavaScript: for, while y do...while sin perderte'
 description: 'Repetir código sin copiarlo diez veces. Cómo funcionan for, while, do...while y for...of, cuándo usar cada uno y cómo no crear un bucle infinito.'
-date: 2026-11-26
+date: 2026-11-27
 series: javascript
 tags: [JavaScript, Fundamentos]
-draft: true
+draft: false
 ---
 
 Imagina que quieres mostrar los números del 1 al 10. Podrías escribir diez `console.log`... ¿y si fueran mil? Para eso existen los **bucles**: repiten un bloque de código las veces que necesites.

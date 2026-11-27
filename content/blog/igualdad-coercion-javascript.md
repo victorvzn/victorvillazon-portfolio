@@ -1,10 +1,10 @@
 ---
 title: 'Comparar en JavaScript: ===, ==, coerción y truthy/falsy a fondo'
 description: 'Por qué 0 == "" es true, por qué [] === [] es false y cómo comparar sin sorpresas. La coerción de tipos explicada con ejemplos.'
-date: 2026-11-26
+date: 2026-11-27
 series: javascript
 tags: [JavaScript, Fundamentos]
-draft: true
+draft: false
 ---
 
 En los posts de tipos de datos y de condicionales te dije "usa siempre `===`" y te presenté los valores *falsy*. Hoy vamos a ver **por qué**, porque comparar mal es una de las fuentes de bugs más típicas de un junior: un `if` que entra cuando no debería, un `0` que se trata como "vacío" o dos objetos iguales que JavaScript dice que son distintos.

@@ -1,10 +1,10 @@
 ---
 title: 'Vite: crea un proyecto frontend moderno en un minuto'
 description: 'Qué es un bundler, qué hace Vite por ti, cómo crear un proyecto con JavaScript puro o con React, importar CSS y archivos, usar variables de entorno y preparar la versión para publicar.'
-date: 2026-11-26
+date: 2026-11-27
 series: frameworks
 tags: [Vite, Herramientas, Frameworks]
-draft: true
+draft: false
 ---
 
 Hasta ahora, tus proyectos eran un `index.html`, un `estilos.css` y un `app.js`, que abrías haciendo doble clic. Funciona perfectamente para aprender. Pero en cuanto empiezas a usar paquetes de npm, React o Tailwind, necesitas una herramienta que **prepare tu código** para el navegador. La más usada hoy es **Vite**.

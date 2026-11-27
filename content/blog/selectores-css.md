@@ -1,10 +1,10 @@
 ---
 title: 'Selectores CSS: aprende a apuntar a lo que quieres'
 description: 'Clases, ids, descendientes, hijos, hermanos, pseudo-clases y :has(). Con un mini juego para practicar.'
-date: 2026-11-25
+date: 2026-11-27
 series: css
 tags: [CSS, Fundamentos]
-draft: true
+draft: false
 order: 11
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: 'Pseudo-clases y pseudo-elementos: :hover, :nth-child, ::before y compañía'
 description: 'Da estilo a los elementos según su estado o su posición, y añade decoraciones sin tocar el HTML. Las pseudo-clases y pseudo-elementos más útiles.'
-date: 2026-11-26
+date: 2026-11-27
 series: css
 tags: [CSS, Selectores, Fundamentos]
-draft: true
+draft: false
 ---
 
 Con los selectores normales apuntas a elementos: "todos los botones", "los elementos con la clase `.tarjeta`". Pero a veces necesitas algo más fino: el botón **cuando pasas el ratón**, la **primera** fila de una tabla, o un adorno **antes** de un título. Para eso están las pseudo-clases y los pseudo-elementos.

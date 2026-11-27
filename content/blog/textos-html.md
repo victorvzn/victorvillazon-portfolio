@@ -1,10 +1,10 @@
 ---
 title: 'Etiquetas de texto en HTML: títulos, párrafos, strong, em y compañía'
 description: 'h1 a h6 y su jerarquía, párrafos, strong vs b, em vs i, citas, código, abreviaturas y saltos de línea. Cuándo usar cada etiqueta de texto y por qué no es lo mismo que darle estilo.'
-date: 2026-11-26
+date: 2026-11-27
 series: html
 tags: [HTML, Fundamentos, Accesibilidad]
-draft: true
+draft: false
 ---
 
 La mayor parte de una web es **texto**: títulos, párrafos, listas, citas. HTML tiene una etiqueta para cada tipo de texto, y elegir la correcta no es una cuestión de estética: le dice al navegador, a Google y a los lectores de pantalla **qué es** cada cosa.
