@@ -1,10 +1,10 @@
 ---
 title: 'Scope y hoisting en JavaScript: dónde vive cada variable'
 description: 'Qué es el scope global, de función y de bloque, por qué una variable "no está definida" y qué es el hoisting con var, let, const y las funciones.'
-date: 2026-11-26
+date: 2026-11-27
 series: javascript
 tags: [JavaScript, Fundamentos]
-draft: true
+draft: false
 ---
 
 `ReferenceError: total is not defined`. Declaraste `total`, lo ves ahí mismo en tu código... pero JavaScript dice que no existe. Casi siempre, el problema es el **scope**: la variable existe, pero **no desde donde la estás usando**.

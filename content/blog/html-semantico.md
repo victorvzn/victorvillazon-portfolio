@@ -1,10 +1,10 @@
 ---
 title: 'HTML semántico: deja de usar div para todo'
 description: 'header, nav, main, article, footer: qué significa cada uno, por qué importa y cómo rehacer una página llena de divs.'
-date: 2026-11-25
+date: 2026-11-27
 series: html
 tags: [HTML, Accesibilidad, Fundamentos]
-draft: true
+draft: false
 order: 6
 ---
 

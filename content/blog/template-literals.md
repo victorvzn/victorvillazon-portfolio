@@ -1,10 +1,10 @@
 ---
 title: 'Template literals: adiós a concatenar con +'
 description: 'Las comillas invertidas de JavaScript: variables dentro del texto, varias líneas y hasta HTML. Con una tarjeta de producto.'
-date: 2026-11-25
+date: 2026-11-27
 series: javascript
 tags: [JavaScript, ES6]
-draft: true
+draft: false
 order: 21
 ---
 

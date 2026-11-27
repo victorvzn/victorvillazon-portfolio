@@ -1,10 +1,10 @@
 ---
 title: 'Especificidad: por qué tu CSS "no funciona"'
 description: 'Escribiste el estilo, recargaste y nada. Casi siempre es la especificidad. Aprende a calcularla y deja de usar !important.'
-date: 2026-11-25
+date: 2026-11-27
 series: css
 tags: [CSS, Fundamentos]
-draft: true
+draft: false
 order: 12
 ---
 

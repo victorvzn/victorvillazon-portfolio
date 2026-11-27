@@ -1,10 +1,10 @@
 ---
 title: 'Mini proyecto: una calculadora de IMC con HTML, CSS y JavaScript'
 description: 'Tu primer proyecto completo: un formulario que calcula el Índice de Masa Corporal y muestra el resultado con color. Con enunciado, pistas y solución oculta.'
-date: 2026-11-26
+date: 2026-11-27
 series: ejercicios
 tags: [HTML, CSS, JavaScript, Proyectos]
-draft: true
+draft: false
 ---
 
 Ya sabes hacer formularios, darles estilo y responder a eventos. Toca juntarlo todo en un **proyecto pequeño pero completo**: una calculadora del **Índice de Masa Corporal (IMC)**.

@@ -1,10 +1,10 @@
 ---
 title: 'Cascada y herencia en CSS: por qué tu estilo "no se aplica"'
 description: 'Cómo decide el navegador qué regla gana, qué propiedades se heredan de padres a hijos y para qué sirven inherit, initial, unset y revert.'
-date: 2026-11-26
+date: 2026-11-27
 series: css
 tags: [CSS, Fundamentos]
-draft: true
+draft: false
 ---
 
 Escribes `color: red`, guardas, recargas... y el texto sigue azul. Es la frustración número uno cuando empiezas con CSS. Casi nunca es un bug del navegador: es que **otra regla está ganando**. Para saber cuál y por qué, necesitas entender dos ideas: la **cascada** y la **herencia**.

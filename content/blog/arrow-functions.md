@@ -1,10 +1,10 @@
 ---
 title: 'Arrow functions explicadas sin complicarte'
 description: 'Qué son las funciones flecha, cómo se escriben, cuándo llevan return y cuándo no. Paso a paso.'
-date: 2026-11-25
+date: 2026-11-27
 series: javascript
 tags: [JavaScript, ES6, Funciones]
-draft: true
+draft: false
 order: 22
 ---
 

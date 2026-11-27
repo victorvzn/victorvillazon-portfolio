@@ -1,10 +1,10 @@
 ---
 title: 'Mini proyecto: piedra, papel o tijera contra el ordenador'
 description: 'Un juego completo con HTML, CSS y JavaScript: elegir una jugada, que el ordenador elija al azar, decidir quién gana y llevar el marcador. Con enunciado, pistas y solución oculta.'
-date: 2026-11-26
+date: 2026-11-27
 series: ejercicios
 tags: [HTML, CSS, JavaScript, Proyectos]
-draft: true
+draft: false
 ---
 
 Un juego es una forma genial de practicar, porque **sabes enseguida si funciona**. Piedra, papel o tijera tiene justo lo que necesitas a estas alturas: eventos, números aleatorios, condicionales y actualizar la página.
