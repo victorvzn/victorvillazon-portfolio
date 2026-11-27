@@ -4,7 +4,7 @@ description: 'Antes de programar nada necesitas saber con qué trabajas. Los tip
 date: 2026-11-26
 series: javascript
 tags: [JavaScript, Fundamentos]
-draft: true
+draft: false
 ---
 
 Todo lo que maneja un programa es un **dato**: el precio de un producto, el nombre de un usuario, si está conectado o no. Y cada dato tiene un **tipo**, que decide qué puedes hacer con él. No es lo mismo sumar `2 + 2` que sumar `'2' + '2'`.

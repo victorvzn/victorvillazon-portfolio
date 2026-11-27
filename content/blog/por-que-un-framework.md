@@ -4,7 +4,7 @@ description: 'Qué problema resuelven React, Vue y compañía, explicado con el 
 date: 2026-11-26
 series: frameworks
 tags: [Frameworks, React, Vue, Fundamentos]
-draft: true
+draft: false
 ---
 
 Si miras ofertas de trabajo de frontend, casi todas piden React, Vue o Angular. Y es fácil caer en la tentación de saltarte el JavaScript "normal" e ir directo al framework. Hoy vamos a ver **qué problema resuelven**, con un ejemplo, para que cuando llegues a React sepas por qué hace lo que hace.

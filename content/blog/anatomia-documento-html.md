@@ -4,7 +4,7 @@ description: 'Qué significa cada línea del esqueleto de una página web: docty
 date: 2026-11-26
 series: html
 tags: [HTML, Fundamentos]
-draft: true
+draft: false
 ---
 
 Toda página web, desde un blog personal hasta YouTube, empieza con el mismo **esqueleto** de HTML. Cuando eres nuevo, ese bloque de líneas parece un conjuro que copias sin entender. Hoy vamos a ver qué significa cada línea, para que nunca más sea magia.

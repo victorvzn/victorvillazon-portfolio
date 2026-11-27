@@ -4,7 +4,7 @@ description: 'Pierde el miedo a la pantalla negra. Qué es la terminal, cómo mo
 date: 2026-11-26
 series: carrera
 tags: [Terminal, Herramientas, Fundamentos]
-draft: true
+draft: false
 ---
 
 Tarde o temprano, cualquier tutorial te dirá "abre la terminal y ejecuta...". Instalar paquetes, arrancar un proyecto, usar Git: todo pasa por esa pantalla negra que intimida al principio. La buena noticia es que para frontend necesitas **muy pocos comandos**, y en este post están todos.

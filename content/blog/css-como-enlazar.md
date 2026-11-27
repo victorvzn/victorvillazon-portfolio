@@ -4,7 +4,7 @@ description: 'CSS en línea, en una etiqueta style o en un archivo aparte: cómo
 date: 2026-11-26
 series: css
 tags: [CSS, Fundamentos]
-draft: true
+draft: false
 ---
 
 Antes de aprender selectores, colores o Flexbox, hay una pregunta básica: **¿dónde escribo el CSS?** Hay tres sitios posibles. Los tres funcionan, pero no son igual de buenos.

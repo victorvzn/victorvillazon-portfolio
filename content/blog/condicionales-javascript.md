@@ -4,7 +4,7 @@ description: 'Haz que tu programa tome decisiones. if, else if, switch, el opera
 date: 2026-11-26
 series: javascript
 tags: [JavaScript, Fundamentos]
-draft: true
+draft: false
 ---
 
 Un programa sin condicionales hace siempre lo mismo. Con ellos puede **decidir**: mostrar "Agotado" si no hay stock, aplicar un descuento si la compra supera cierto monto o saludar distinto por la mañana y por la noche.

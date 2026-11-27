@@ -1,10 +1,10 @@
 ---
 title: 'let, const y por qué ya no usamos var'
 description: 'Las tres formas de declarar variables en JavaScript, sus diferencias y una regla simple para elegir.'
-date: 2026-11-25
+date: 2026-11-26
 series: javascript
 tags: [JavaScript, ES6, Fundamentos]
-draft: true
+draft: false
 order: 20
 ---
 

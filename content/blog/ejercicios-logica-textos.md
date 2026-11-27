@@ -4,7 +4,7 @@ description: 'Capitalizar, convertir temperaturas, promediar notas, limpiar una 
 date: 2026-11-26
 series: ejercicios
 tags: [JavaScript, Lógica, Ejercicios]
-draft: true
+draft: false
 ---
 
 Los textos (*strings*) aparecen en casi todos los programas: nombres que hay que formatear, listas que llegan separadas por comas, búsquedas que hay que limpiar. Estos seis ejercicios te hacen practicar exactamente eso.
